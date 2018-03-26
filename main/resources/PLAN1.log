@@ -1,0 +1,40 @@
+[2018-03-21 10:45:55] Plan File: /app/abinitio/users/walenm01/private_sand/hd/zw_ANALYSIS/plan/PROJEKT_PP/PLAN1.plan
+[2018-03-21 10:45:55] Recovery File: /app/abinitio/data/dev/admin/hd/zw_ANALYSIS/log/walenm01/PLAN1.rec
+[2018-03-21 10:45:55] Beginning plan '/'
+[2018-03-21 10:45:58] Standard Output for '/GRAPH_TASK1/perform':
+info : ++++ STARTED ++++ Job Graph1_2018-03-21-10-45-56_19792374
+info : Execution host t3devabinitio
+info : Central logging to /app/abinitio/data/dev/admin/log/environment_operations_2018_03.log
+info : Raw tracking to /app/abinitio/data/dev/admin/hd/zw_ANALYSIS/tracking/walenm01/Graph1_2018-03-21-10-45-56_19792374.tracking
+info : Input pset archived to /app/abinitio/data/dev/admin/hd/zw_ANALYSIS/parameter/walenm01/Graph1_2018-03-21-10-45-56_19792374.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/dev/admin/hd/zw_ANALYSIS/error/walenm01/Graph1_PSET__21823974_2018-03-21-10-45-56.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/dev/admin/hd/zw_ANALYSIS/log/walenm01/Graph1_PSET__19792376_2018-03-21-10-45-56.log
+[2018-03-21 10:45:59] Standard Output for '/GRAPH_TASK3/perform':
+info : ++++ STARTED ++++ Job Graph3_2018-03-21-10-45-57_21823978
+info : Execution host t3devabinitio
+info : Central logging to /app/abinitio/data/dev/admin/log/environment_operations_2018_03.log
+info : Raw tracking to /app/abinitio/data/dev/admin/hd/zw_ANALYSIS/tracking/walenm01/Graph3_2018-03-21-10-45-57_21823978.tracking
+info : Input pset archived to /app/abinitio/data/dev/admin/hd/zw_ANALYSIS/parameter/walenm01/Graph3_2018-03-21-10-45-57_21823978.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/dev/admin/hd/zw_ANALYSIS/error/walenm01/Graph3_PSET__21823980_2018-03-21-10-45-57.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/dev/admin/hd/zw_ANALYSIS/log/walenm01/Graph3_PSET__40698020_2018-03-21-10-45-57.log
+[2018-03-21 10:46:00] Standard Output for '/GRAPH_TASK1/perform':
+info : ++++ COMPLETED ++++ Job Graph1_2018-03-21-10-45-56_19792374
+[2018-03-21 10:46:02] Standard Output for '/GRAPH_TASK3/perform':
+info : ++++ COMPLETED ++++ Job Graph3_2018-03-21-10-45-57_21823978
+[2018-03-21 10:46:03] Standard Output for '/GRAPH_TASK2/perform':
+info : ++++ STARTED ++++ Job Graph2_2018-03-21-10-46-01_31195374
+info : Execution host t3devabinitio
+info : Central logging to /app/abinitio/data/dev/admin/log/environment_operations_2018_03.log
+info : Raw tracking to /app/abinitio/data/dev/admin/hd/zw_ANALYSIS/tracking/walenm01/Graph2_2018-03-21-10-46-01_31195374.tracking
+info : Input pset archived to /app/abinitio/data/dev/admin/hd/zw_ANALYSIS/parameter/walenm01/Graph2_2018-03-21-10-46-01_31195374.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/dev/admin/hd/zw_ANALYSIS/error/walenm01/Graph2_PSET__27132262_2018-03-21-10-46-01.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/dev/admin/hd/zw_ANALYSIS/log/walenm01/Graph2_PSET__26411166_2018-03-21-10-46-01.log
+[2018-03-21 10:46:05] Standard Output for '/GRAPH_TASK2/perform':
+info : ++++ COMPLETED ++++ Job Graph2_2018-03-21-10-46-01_31195374
+[2018-03-21 10:46:05] Completed plan '/' (status=Success)
