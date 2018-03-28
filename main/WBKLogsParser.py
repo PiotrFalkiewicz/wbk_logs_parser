@@ -21,7 +21,6 @@ def chooseCandidates(lines):
 
 def parseLinesToNames(candidates):
     result = []
-    keyword = 'perform'
     for line in candidates:
         items = line.split('/')
         result.append(items[1])
