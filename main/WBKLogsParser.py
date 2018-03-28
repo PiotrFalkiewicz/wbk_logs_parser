@@ -6,7 +6,6 @@ def utilDistinct(listArg):
 def readFile(filename):
     listOfLines = []
     with open(filename, 'r') as file:
-        file.readline()
         for line in file:
             listOfLines.append(line)
     return listOfLines

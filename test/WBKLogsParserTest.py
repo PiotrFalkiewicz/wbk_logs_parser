@@ -6,12 +6,12 @@ import unittest
 class TestFirstIteration(unittest.TestCase):
     def test_read_file(self):
         data = main.WBKLogsParser.readFile('resources/test_plan.log')
-        self.assertEqual(len(data), 3)
+        self.assertEqual(len(data), 4)
 
     def test_candidates(self):
         data = main.WBKLogsParser.readFile('resources/test_plan.log')
         candidates = main.WBKLogsParser.chooseCandidates(data)
-        self.assertEqual(len(candidates), 1)
+        self.assertEqual(len(candidates), 2)
 
     def test_mining_names(self):
         data = main.WBKLogsParser.readFile('resources/test_plan.log')
