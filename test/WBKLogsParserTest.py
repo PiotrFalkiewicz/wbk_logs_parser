@@ -33,5 +33,27 @@ class TestFirstIteration(unittest.TestCase):
         distinctNames = main.WBKLogsParser.utilDistinct(names)
         self.assertEqual(distinctNames, ['GRAPH_TASK1'])
 
+
+
+class TestSecondIteration(unittest.TestCase):
+    def test_read_CSV_file(self):
+        data = main.WBKLogsParser.readCSVFile('resources/test_plan_2_1.log')
+        self.assertEqual(4, len(data))
+
+    def test_candidates_with_time(self):
+        data = main.WBKLogsParser.readFile('resources/test_plan_2_2.log')
+        candidates = main.WBKLogsParser.chooseCandidatesWithTime(data)
+        self.assertEqual(8, len(candidates))
+
+    def test_parse_task_name(self):
+        name = main.WBKLogsParser.parseTaskName('Graph1')
+        self.assertEqual('GRAPH_1', name)
+
+    def test_get_type_name_time(self):
+        data = main.WBKLogsParser.readFile('resources/test_plan_2_2.log')
+        candidates = main.WBKLogsParser.chooseCandidatesWithTime(data)
+        type, name, time = main.WBKLogsParser.getTypeNameTime(candidates[0])
+        self.assertEqual((type, name, time), (0, 'GRAPH_3', '32326'))
+
 if __name__ == '__main__':
     unittest.main()
