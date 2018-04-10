@@ -82,10 +82,83 @@ def normalTasks(candidates, tasks):
 
     return result
 
-# def reformatDependencies(collection):
+def reformatDependencies(collection):
+    newTable = []
+    for line in collection:
+        if len(newTable) > 0:
+            isOnList = False
+            newLine = []
+            for currentLine in newTable:
 
+                if currentLine[0] == line[1]:
+                    if line[1] != '' and line[0] not in currentLine:
+                        currentLine.append(line[0])
 
-# def calculateTimes(collection, dependencies):
+                elif currentLine[0] == line[2]:
+                    if line[2] != '' and line[0] not in currentLine:
+                        currentLine.append(line[0])
+
+                elif currentLine[0] == line[1] or currentLine[0] == line[2]:
+                    isOnList = True
+
+            if not isOnList:
+                if line[2] != '' and len(line[1]) == 0:
+                    newLine.append(line[2])
+                    newLine.append(line[0])
+                    newTable.append(newLine)
+
+                elif line[1] != '' and len(line[2]) == 0:
+                    newLine.append(line[1])
+                    newLine.append(line[0])
+                    newTable.append(newLine)
+
+                elif line[1] == line[2] and line[1] != '':
+                    newLine.append(line[1])
+                    newLine.append(line[0])
+                    newTable.append(newLine)
+
+        else:
+            newLine = []
+            if line[2] != '' and line[1] == '':
+                newLine.append(line[2])
+                newLine.append(line[0])
+                newTable.append(newLine)
+
+            elif line[1] != '' and line[2] == '':
+                newLine.append(line[1])
+                newLine.append(line[0])
+                newTable.append(newLine)
+
+            elif line[1] == line[2] and line[1] != '':
+                newLine.append(line[1])
+                newLine.append(line[0])
+                newTable.append(newLine)
+
+    return newTable
+
+def calculateTimes(collection, dependencies):
+    result = []
+
+    for task in collection:
+        newLine = []
+        newLine.append(task[0])
+        newLine.append(str(int(task[2])-int(task[1])))
+        isOnList = False
+        anchestorTime = ''
+        for dep in dependencies:
+            if dep[0] == task[0]:
+                isOnList = True
+                for agTask in collection:
+                    if agTask[0] == dep[1]:
+                        anchestorTime = agTask[2]
+
+        if not isOnList:
+            newLine.append('')
+        else:
+            newLine.append(str(int(task[1])-int(anchestorTime)))
+        result.append(newLine)
+
+    return result
 
 
 
@@ -98,9 +171,9 @@ def main():
     lines = readFile(args.inputFile)
 
     csv = readCSVFile(args.dependenciesFile)
-
-    for line in csv:
-        print(line)
+    #
+    # for line in csv:
+    #     print(line)
 
     candidates = chooseCandidatesWithTime(lines)
 
@@ -110,11 +183,23 @@ def main():
     print()
     newList = normalTasks(candidates, tasks)
 
+    newDependencies = reformatDependencies(csv)
+
+    for line in newDependencies:
+        print(line)
+
+    print("")
+
 
     for item in newList:
         print(item)
 
 
+    finalCollection = calculateTimes(newList, newDependencies)
+
+    print("")
+    for line in finalCollection:
+        print(line)
 
 
 
