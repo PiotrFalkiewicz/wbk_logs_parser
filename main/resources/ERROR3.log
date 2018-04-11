@@ -1,0 +1,465 @@
++ planname=EWALLET_DAILY_LOAD.plan
++ planpath=/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/
++ runpath=/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan
++ tracking=0
++ [ 0 -eq 1 ]
++ track=
++ cd /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan
++ air sandbox run /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/EWALLET_DAILY_LOAD.plan
+info : ++++ STARTED ++++ Job EWALLET_DAILY_LOAD.plan_2018-02-18-04-47-33_18546750
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_02.log
+info : Plan tracking to /app/abinitio/data/prod/admin/hd/wh_plans_daily/tracking/airun/EWALLET_DAILY_LOAD.plan_2018-02-18-04-47-33_18546750.dom
+info : Plan input pset archived to /app/abinitio/data/prod/admin/hd/wh_plans_daily/parameter/airun/EWALLET_DAILY_LOAD.plan_2018-02-18-04-47-33_18546750.pset
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_plans_daily/error/airun/EWALLET_DAILY_LOAD.plan_PSET__22741172_2018-02-18-04-47-33.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_plans_daily/log/airun/EWALLET_DAILY_LOAD.plan_PSET__4129316_2018-02-18-04-47-33.log
+WARNING: While requesting a resource, a warning was issued.  Request
+will continue.
+  Task/plan name: /EWALLET_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN
+  Warning: The resource pool '/app/abinitio/users/aiprod/sand/public/pub_plans/resource/DB_KHD_prod.pool' is out of date in the resource server.
+[2018-02-18 04:52:48] Standard Error for '/LOAD/EWALLET_LOAD_KHD_TRANS_EWALLET_DET_BZWBK/perform':
+========= Error from _PUB_TERADATA_DB_PROD_TRANS_EWALLET_DET_BZWBK__table_.tload.000 on p_abinitio =========
+Error on record 0
+While executing transform assignment:
+Insufficient space in output in assignment for EXTERNAL_ID. Size of destination is 20 bytes but trying to assign 121 bytes Unable to evaluate the expression "EXTERNAL_ID" Source is the field "EXTERNAL_ID" - it has the value "35318120164                                                                                                              ".
+
+ABINITIO(DB00250):  Rejected record value:
+ABINITIO(DB00250):  
+[record
+  WH_ACC_NO         "403548495"
+  TRANS_DTE         "2018-02-13"
+  TXN_ID            "8702"
+  EWALLET_ID        "103581"
+  TARGET_WALLET_ID  NULL
+  EWALLET_PHONE_NO  "+48694389270"
+  TARGET_PHONE_NO   NULL
+  CHNL_TYP          "-1"
+  SRCE_CHNL_TYP     "50"
+  AUTH_ID           "9105981"
+  TRANS_STA_CDE     "4"
+  CREATED_TIME      NULL
+  ACCEPTED_TIME     "2018-02-13 15:01:36.000000"
+  EXECUTED_TIME     "2018-02-13 15:01:40.000000"
+  CANCELLED_TIME    NULL
+  REVERSED_TIME     NULL
+  EXTERNAL_DTE      NULL
+  EXTERNAL_ID       "35318120164                                                                                                              "
+  REF_TRANS_DTE     NULL
+  REF_TRANS_ID      NULL
+  TRANS_AUTH_AMT    "23.89"
+  POSTED_AMT        "23.89"
+  POSTED_CRNCY_CDE  "PLN"
+  TARGET_AMT        "23.89"
+  TARGET_CRNCY_CDE  "PLN"
+  EWALLET_ACC_NO    "23109027180000000104868144"
+  EWALLET_ACC_DESCR "MARIUSZ BIENIASZ, DYWIZJONU 303 2/60 10-088 OLSZTYN"
+  EWALLET_ACC_TYP   "501"
+  TARGET_ACC_NO     "72109014890000000048003393"
+  TARGET_ACC_DESCR  "eWalletPSP    13-02-2018 0              35318120164       EWLTPSP  50                              13-02-20188702"
+  TRANS_TITLE_TXT   "Zakup BLIK PayU AllegroNone Grunwaldzka 18260-166 Poznan ref:35318120164"
+  TRANSFER_TYP      "5"
+  AUTH_CDE          "8"
+  REJECT_CDE        "0"
+  POSTED_DTE        "2018-02-13"
+  POSTED_ID         "807434537"
+  SRCE_SYS          "5065"
+  LOAD_DTE          "2018-02-18"
+  LOAD_TIME         "04:52:15"
+  newline           "\n"]
+
+This error is fatal because no reject port was attached to this component.
+Processing will continue on errors if a reject port is connected.
+ABINITIO(*):        Database Package Version 3-2-7-3-e11-1
+
+========= Error from _PUB_TERADATA_DB_PROD_TRANS_EWALLET_DET_BZWBK__table_.tload.001 on p_abinitio =========
+Error on record 0
+While executing transform assignment:
+Insufficient space in output in assignment for EXTERNAL_ID. Size of destination is 20 bytes but trying to assign 121 bytes Unable to evaluate the expression "EXTERNAL_ID" Source is the field "EXTERNAL_ID" - it has the value "35378584593                                                                                                              ".
+
+ABINITIO(DB00250):  Rejected record value:
+ABINITIO(DB00250):  
+[record
+  WH_ACC_NO         "434788802"
+  TRANS_DTE         "2018-02-16"
+  TXN_ID            "1236"
+  EWALLET_ID        "99251"
+  TARGET_WALLET_ID  NULL
+  EWALLET_PHONE_NO  "+48888569350"
+  TARGET_PHONE_NO   NULL
+  CHNL_TYP          "-1"
+  SRCE_CHNL_TYP     "50"
+  AUTH_ID           "9172001"
+  TRANS_STA_CDE     "4"
+  CREATED_TIME      NULL
+  ACCEPTED_TIME     "2018-02-16 08:16:29.000000"
+  EXECUTED_TIME     "2018-02-16 08:16:31.000000"
+  CANCELLED_TIME    NULL
+  REVERSED_TIME     NULL
+  EXTERNAL_DTE      NULL
+  EXTERNAL_ID       "35378584593                                                                                                              "
+  REF_TRANS_DTE     NULL
+  REF_TRANS_ID      NULL
+  TRANS_AUTH_AMT    "8.50"
+  POSTED_AMT        "8.50"
+  POSTED_CRNCY_CDE  "PLN"
+  TARGET_AMT        "8.50"
+  TARGET_CRNCY_CDE  "PLN"
+  EWALLET_ACC_NO    "90109018540000000115848332"
+  EWALLET_ACC_DESCR "ZBIGNIEW FRANCZYSZYN, OS. BOLES  AWA CHROBREGO 32/56 60-681 POZNAN"
+  EWALLET_ACC_TYP   "501"
+  TARGET_ACC_NO     "72109014890000000048003393"
+  TARGET_ACC_DESCR  "eWalletPSP    16-02-2018 0              35378584593       EWLTPSP  50                              16-02-20181236"
+  TRANS_TITLE_TXT   "Zakup BLIK MARCHEWKOWE POLE Poznan ref:35378584593"
+  TRANSFER_TYP      "1"
+  AUTH_CDE          "8"
+  REJECT_CDE        "0"
+  POSTED_DTE        "2018-02-16"
+  POSTED_ID         "821396819"
+  SRCE_SYS          "5065"
+  LOAD_DTE          "2018-02-18"
+  LOAD_TIME         "04:52:15"
+  newline           "\n"]
+
+This error is fatal because no reject port was attached to this component.
+Processing will continue on errors if a reject port is connected.
+ABINITIO(*):        Database Package Version 3-2-7-3-e11-1
+
+========= Error from _PUB_TERADATA_DB_PROD_TRANS_EWALLET_DET_BZWBK__table_.tload.002 on p_abinitio =========
+Error on record 0
+While executing transform assignment:
+Insufficient space in output in assignment for EXTERNAL_ID. Size of destination is 20 bytes but trying to assign 121 bytes Unable to evaluate the expression "EXTERNAL_ID" Source is the field "EXTERNAL_ID" - it has the value "35317928728                                                                                                              ".
+
+ABINITIO(DB00250):  Rejected record value:
+ABINITIO(DB00250):  
+[record
+  WH_ACC_NO         "421345620"
+  TRANS_DTE         "2018-02-13"
+  TXN_ID            "7349"
+  EWALLET_ID        "100067"
+  TARGET_WALLET_ID  NULL
+  EWALLET_PHONE_NO  "+48784040919"
+  TARGET_PHONE_NO   NULL
+  CHNL_TYP          "-1"
+  SRCE_CHNL_TYP     "50"
+  AUTH_ID           "9103967"
+  TRANS_STA_CDE     "4"
+  CREATED_TIME      NULL
+  ACCEPTED_TIME     "2018-02-13 13:54:04.000000"
+  EXECUTED_TIME     "2018-02-13 13:54:26.000000"
+  CANCELLED_TIME    NULL
+  REVERSED_TIME     NULL
+  EXTERNAL_DTE      NULL
+  EXTERNAL_ID       "35317928728                                                                                                              "
+  REF_TRANS_DTE     NULL
+  REF_TRANS_ID      NULL
+  TRANS_AUTH_AMT    "16.00"
+  POSTED_AMT        "16.00"
+  POSTED_CRNCY_CDE  "PLN"
+  TARGET_AMT        "16.00"
+  TARGET_CRNCY_CDE  "PLN"
+  EWALLET_ACC_NO    "50109014630000000112945058"
+  EWALLET_ACC_DESCR "MARCIN PATAN, UL. TYSI  CLECIA 17/10 64-300 NOWY TOMY  L"
+  EWALLET_ACC_TYP   "501"
+  TARGET_ACC_NO     "72109014890000000048003393"
+  TARGET_ACC_DESCR  "eWalletPSP    13-02-2018 0              35317928728       EWLTPSP  50                              13-02-20187349"
+  TRANS_TITLE_TXT   "Zakup BLIK Marchewkowe Pole BG Poznan ref:35317928728"
+  TRANSFER_TYP      "1"
+  AUTH_CDE          "8"
+  REJECT_CDE        "0"
+  POSTED_DTE        "2018-02-13"
+  POSTED_ID         "807140452"
+  SRCE_SYS          "5065"
+  LOAD_DTE          "2018-02-18"
+  LOAD_TIME         "04:52:15"
+  newline           "\n"]
+
+This error is fatal because no reject port was attached to this component.
+Processing will continue on errors if a reject port is connected.
+ABINITIO(*):        Database Package Version 3-2-7-3-e11-1
+
+========= Error from _PUB_TERADATA_DB_PROD_TRANS_EWALLET_DET_BZWBK__table_.tload.003 on p_abinitio =========
+Error on record 0
+While executing transform assignment:
+Insufficient space in output in assignment for EXTERNAL_ID. Size of destination is 20 bytes but trying to assign 121 bytes Unable to evaluate the expression "EXTERNAL_ID" Source is the field "EXTERNAL_ID" - it has the value "3168444516                                                                                                               ".
+
+ABINITIO(DB00250):  Rejected record value:
+ABINITIO(DB00250):  
+[record
+  WH_ACC_NO         "417829847"
+  TRANS_DTE         "2018-02-13"
+  TXN_ID            "4548"
+  EWALLET_ID        "99919"
+  TARGET_WALLET_ID  NULL
+  EWALLET_PHONE_NO  "+48691503479"
+  TARGET_PHONE_NO   NULL
+  CHNL_TYP          "-1"
+  SRCE_CHNL_TYP     "7"
+  AUTH_ID           "9100185"
+  TRANS_STA_CDE     "4"
+  CREATED_TIME      NULL
+  ACCEPTED_TIME     "2018-02-13 11:37:43.000000"
+  EXECUTED_TIME     "2018-02-13 11:37:45.000000"
+  CANCELLED_TIME    NULL
+  REVERSED_TIME     NULL
+  EXTERNAL_DTE      NULL
+  EXTERNAL_ID       "3168444516                                                                                                               "
+  REF_TRANS_DTE     NULL
+  REF_TRANS_ID      NULL
+  TRANS_AUTH_AMT    "40.00"
+  POSTED_AMT        "40.00"
+  POSTED_CRNCY_CDE  "PLN"
+  TARGET_AMT        "40.00"
+  TARGET_CRNCY_CDE  "PLN"
+  EWALLET_ACC_NO    "19109011020000000110613420"
+  EWALLET_ACC_DESCR "JANUSZ KULIK, UL. ROGALI  SKA 11B/2 80-809 GDA  SK"
+  EWALLET_ACC_TYP   "501"
+  TARGET_ACC_NO     "13109014890000000048191180"
+  TARGET_ACC_DESCR  "eWalletPSP    13-02-2018 3168444516                       EWLTWBK  7                               13-02-20184548"
+  TRANS_TITLE_TXT   "Wyp  ata BLIK BZ WBK GDANSK 1 O - 3-GO MA UL.3 MAJA 3 ref:U180213450341"
+  TRANSFER_TYP      "Q"
+  AUTH_CDE          "8"
+  REJECT_CDE        "0"
+  POSTED_DTE        "2018-02-13"
+  POSTED_ID         "806507611"
+[2018-02-18 04:52:49] Standard Error for '/LOAD/EWALLET_LOAD_KHD_TRANS_EWALLET_DET_BZWBK/perform':
+  SRCE_SYS          "5065"
+  LOAD_DTE          "2018-02-18"
+  LOAD_TIME         "04:52:15"
+  newline           "\n"]
+
+This error is fatal because no reject port was attached to this component.
+Processing will continue on errors if a reject port is connected.
+ABINITIO(*):        Database Package Version 3-2-7-3-e11-1
+
+ABINITIO (3.2.7.3): Sun Feb 18 04:52:48 2018
+ABINITIO: Rolling back ... Done.
+ABINITIO: Auto rollback succeeded.
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5a88f755-e200e0-7-EWALLET_LOAD_KHD_TRANS_EWALLET_DET_BZWBK.rec
+[2018-02-18 04:52:55] Standard Error for '/LOAD/EWALLET_LOAD_KHD_TRANS_EWALLET_DET_BZWBK/atrollback':
+ABINITIO (3.2.7.3): Sun Feb 18 04:52:55 2018
+ABINITIO: Rolling back job from recovery file "/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5a88f755-e200e0-7-EWALLET_LOAD_KHD_TRANS_EWALLET_DET_BZWBK.rec".
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5a88f755-e200e0-7-EWALLET_LOAD_KHD_TRANS_EWALLET_DET_BZWBK.rec
+[2018-02-18 04:53:05] Standard Error for '/LOAD/EWALLET_LOAD_KHD_TRANS_EWALLET_DET_NONBZWBK/perform':
+========= Error from _PUB_TERADATA_DB_PROD_TRANS_EWALLET_DET_NONBZWBK__table_.tload.000 on p_abinitio =========
+Error on record 0
+While executing transform assignment:
+Insufficient space in output in assignment for EXTERNAL_ID. Size of destination is 20 bytes but trying to assign 121 bytes Unable to evaluate the expression "EXTERNAL_ID" Source is the field "EXTERNAL_ID" - it has the value "35398798997                                                                                                              ".
+
+ABINITIO(DB00250):  Rejected record value:
+ABINITIO(DB00250):  
+[record
+  TRANS_DTE         "2018-02-17"
+  TXN_ID            "2769"
+  EWALLET_ID        "411638"
+  TARGET_WALLET_ID  NULL
+  EWALLET_PHONE_NO  "+48539994245"
+  TARGET_PHONE_NO   NULL
+  CHNL_TYP          "-1"
+  SRCE_CHNL_TYP     "50"
+  AUTH_ID           "9193568"
+  TRANS_STA_CDE     "4"
+  CREATED_TIME      NULL
+  ACCEPTED_TIME     "2018-02-17 14:04:45.000000"
+  EXECUTED_TIME     "2018-02-17 14:04:47.000000"
+  CANCELLED_TIME    NULL
+  REVERSED_TIME     NULL
+  EXTERNAL_DTE      NULL
+  EXTERNAL_ID       "35398798997                                                                                                              "
+  REF_TRANS_DTE     NULL
+  REF_TRANS_ID      NULL
+  TRANS_AUTH_AMT    "100.00"
+  POSTED_AMT        "100.00"
+  POSTED_CRNCY_CDE  "PLN"
+  TARGET_AMT        "100.00"
+  TARGET_CRNCY_CDE  "PLN"
+  EWALLET_ACC_NO    "20150015461015401280680000"
+  EWALLET_ACC_DESCR "ANNA K KOWALSKA, NARUTOWICZA 71/73 M39  90-132     D  "
+  EWALLET_ACC_TYP   "501"
+  TARGET_ACC_NO     "72109014890000000048003393"
+  TARGET_ACC_DESCR  "eWalletPSP    17-02-2018 0              35398798997       EWLTPSP  50                              17-02-20182769"
+  TRANS_TITLE_TXT   "Wyp  ata BLIK PLANET CASH PL. BARLICKIEGO 5 ref:35398798997"
+  TRANSFER_TYP      "3"
+  AUTH_CDE          "8"
+  REJECT_CDE        "0"
+  POSTED_DTE        "2018-02-17"
+  POSTED_ID         "825613686"
+  SRCE_SYS          "5065"
+  LOAD_DTE          "2018-02-18"
+  LOAD_TIME         "04:52:31"
+  newline           "\n"]
+
+This error is fatal because no reject port was attached to this component.
+Processing will continue on errors if a reject port is connected.
+ABINITIO(*):        Database Package Version 3-2-7-3-e11-1
+
+========= Error from _PUB_TERADATA_DB_PROD_TRANS_EWALLET_DET_NONBZWBK__table_.tload.001 on p_abinitio =========
+Error on record 0
+While executing transform assignment:
+Insufficient space in output in assignment for EXTERNAL_ID. Size of destination is 20 bytes but trying to assign 121 bytes Unable to evaluate the expression "EXTERNAL_ID" Source is the field "EXTERNAL_ID" - it has the value "35322960537                                                                                                              ".
+
+ABINITIO(DB00250):  Rejected record value:
+ABINITIO(DB00250):  
+[record
+  TRANS_DTE         "2018-02-13"
+  TXN_ID            "17127"
+  EWALLET_ID        "164196"
+  TARGET_WALLET_ID  NULL
+  EWALLET_PHONE_NO  "+48504263162"
+  TARGET_PHONE_NO   NULL
+  CHNL_TYP          "-1"
+  SRCE_CHNL_TYP     "50"
+  AUTH_ID           "9116498"
+  TRANS_STA_CDE     "4"
+  CREATED_TIME      NULL
+  ACCEPTED_TIME     "2018-02-13 21:32:10.000000"
+  EXECUTED_TIME     "2018-02-13 21:32:12.000000"
+  CANCELLED_TIME    NULL
+  REVERSED_TIME     NULL
+  EXTERNAL_DTE      NULL
+  EXTERNAL_ID       "35322960537                                                                                                              "
+  REF_TRANS_DTE     NULL
+  REF_TRANS_ID      NULL
+  TRANS_AUTH_AMT    "300.00"
+  POSTED_AMT        "300.00"
+  POSTED_CRNCY_CDE  "PLN"
+  TARGET_AMT        "300.00"
+  TARGET_CRNCY_CDE  "PLN"
+  EWALLET_ACC_NO    "03150011971011901397730000"
+  EWALLET_ACC_DESCR "MARIUSZ JANOTA, STRYJE  SKICH 8/51  02-791 WARSZAWA"
+  EWALLET_ACC_TYP   "501"
+  TARGET_ACC_NO     "72109014890000000048003393"
+  TARGET_ACC_DESCR  "eWalletPSP    13-02-2018 0              35322960537       EWLTPSP  50                              13-02-201817127"
+  TRANS_TITLE_TXT   "Wyp  ata BLIK  UL.WAWOZOWA 36 ref:35322960537"
+  TRANSFER_TYP      "3"
+  AUTH_CDE          "8"
+  REJECT_CDE        "0"
+  POSTED_DTE        "2018-02-13"
+  POSTED_ID         "809132118"
+  SRCE_SYS          "5065"
+  LOAD_DTE          "2018-02-18"
+  LOAD_TIME         "04:52:32"
+  newline           "\n"]
+
+This error is fatal because no reject port was attached to this component.
+Processing will continue on errors if a reject port is connected.
+ABINITIO(*):        Database Package Version 3-2-7-3-e11-1
+
+========= Error from _PUB_TERADATA_DB_PROD_TRANS_EWALLET_DET_NONBZWBK__table_.tload.002 on p_abinitio =========
+Error on record 0
+While executing transform assignment:
+Insufficient space in output in assignment for EXTERNAL_ID. Size of destination is 20 bytes but trying to assign 121 bytes Unable to evaluate the expression "EXTERNAL_ID" Source is the field "EXTERNAL_ID" - it has the value "35340905858                                                                                                              ".
+
+ABINITIO(DB00250):  Rejected record value:
+ABINITIO(DB00250):  
+[record
+  TRANS_DTE         "2018-02-14"
+  TXN_ID            "16304"
+  EWALLET_ID        "125806"
+  TARGET_WALLET_ID  NULL
+  EWALLET_PHONE_NO  "+48510028288"
+  TARGET_PHONE_NO   NULL
+  CHNL_TYP          "-1"
+  SRCE_CHNL_TYP     "50"
+  AUTH_ID           "9143390"
+  TRANS_STA_CDE     "4"
+  CREATED_TIME      NULL
+  ACCEPTED_TIME     "2018-02-14 20:36:11.000000"
+  EXECUTED_TIME     "2018-02-14 20:36:15.000000"
+  CANCELLED_TIME    NULL
+  REVERSED_TIME     NULL
+  EXTERNAL_DTE      NULL
+  EXTERNAL_ID       "35340905858                                                                                                              "
+  REF_TRANS_DTE     NULL
+  REF_TRANS_ID      NULL
+  TRANS_AUTH_AMT    "23.44"
+  POSTED_AMT        "23.44"
+  POSTED_CRNCY_CDE  "PLN"
+  TARGET_AMT        "23.44"
+  TARGET_CRNCY_CDE  "PLN"
+  EWALLET_ACC_NO    "56150010121010102886070000"
+  EWALLET_ACC_DESCR "MAREK SMYKIEWICZ, GNIAZDOWSKA 1A  03-637 WARSZAWA"
+  EWALLET_ACC_TYP   "501"
+  TARGET_ACC_NO     "72109014890000000048003393"
+  TARGET_ACC_DESCR  "eWalletPSP    14-02-2018 0              35340905858       EWLTPSP  50                              14-02-201816304"
+  TRANS_TITLE_TXT   "Zakup BLIK DOTPAY S.A. Wielicka 7230-552 Krakow ref:35340905858"
+  TRANSFER_TYP      "5"
+  AUTH_CDE          "8"
+  REJECT_CDE        "0"
+  POSTED_DTE        "2018-02-14"
+  POSTED_ID         "814144379"
+  SRCE_SYS          "5065"
+  LOAD_DTE          "2018-02-18"
+  LOAD_TIME         "04:52:32"
+  newline           "\n"]
+
+This error is fatal because no reject port was attached to this component.
+Processing will continue on errors if a reject port is connected.
+ABINITIO(*):        Database Package Version 3-2-7-3-e11-1
+
+========= Error from _PUB_TERADATA_DB_PROD_TRANS_EWALLET_DET_NONBZWBK__table_.tload.003 on p_abinitio =========
+Error on record 0
+While executing transform assignment:
+Insufficient space in output in assignment for EXTERNAL_ID. Size of destination is 20 bytes but trying to assign 121 bytes Unable to evaluate the expression "EXTERNAL_ID" Source is the field "EXTERNAL_ID" - it has the value "35300575432                                                                                                              ".
+
+ABINITIO(DB00250):  Rejected record value:
+ABINITIO(DB00250):  
+[record
+  TRANS_DTE         "2018-02-12"
+  TXN_ID            "17696"
+  EWALLET_ID        "162309"
+  TARGET_WALLET_ID  NULL
+  EWALLET_PHONE_NO  "+48883641924"
+  TARGET_PHONE_NO   NULL
+  CHNL_TYP          "-1"
+  SRCE_CHNL_TYP     "50"
+  AUTH_ID           "9091301"
+  TRANS_STA_CDE     "4"
+  CREATED_TIME      NULL
+  ACCEPTED_TIME     "2018-02-12 21:07:20.000000"
+  EXECUTED_TIME     "2018-02-12 21:07:22.000000"
+  CANCELLED_TIME    NULL
+  REVERSED_TIME     NULL
+  EXTERNAL_DTE      NULL
+  EXTERNAL_ID       "35300575432                                                                                                              "
+  REF_TRANS_DTE     NULL
+  REF_TRANS_ID      NULL
+  TRANS_AUTH_AMT    "2.85"
+  POSTED_AMT        "2.85"
+  POSTED_CRNCY_CDE  "PLN"
+  TARGET_AMT        "2.85"
+  TARGET_CRNCY_CDE  "PLN"
+  EWALLET_ACC_NO    "67150010121010103075000000"
+  EWALLET_ACC_DESCR "MAREK SUWART, OBYWATELSKA 13/92  02-409 WARSZAWA"
+  EWALLET_ACC_TYP   "501"
+  TARGET_ACC_NO     "72109014890000000048003393"
+  TARGET_ACC_DESCR  "eWalletPSP    12-02-2018 0              35300575432       EWLTPSP  50                              12-02-201817696"
+  TRANS_TITLE_TXT   "Zakup BLIK PayU AllegroNone Grunwaldzka 18260-166 Poznan ref:35300575432"
+  TRANSFER_TYP      "5"
+  AUTH_CDE          "8"
+  REJECT_CDE        "0"
+  POSTED_DTE        "2018-02-12"
+  POSTED_ID         "804239100"
+  SRCE_SYS          "5065"
+  LOAD_DTE          "2018-02-18"
+  LOAD_TIME         "04:52:32"
+  newline           "\n"]
+
+[2018-02-18 04:53:06] Standard Error for '/LOAD/EWALLET_LOAD_KHD_TRANS_EWALLET_DET_NONBZWBK/perform':
+This error is fatal because no reject port was attached to this component.
+Processing will continue on errors if a reject port is connected.
+ABINITIO(*):        Database Package Version 3-2-7-3-e11-1
+
+ABINITIO (3.2.7.3): Sun Feb 18 04:53:05 2018
+ABINITIO: Rolling back ... Done.
+ABINITIO: Auto rollback succeeded.
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5a88f755-e200e0-8-EWALLET_LOAD_KHD_TRANS_EWALLET_DET_NONBZWBK.rec
+[2018-02-18 04:53:14] Standard Error for '/LOAD/EWALLET_LOAD_KHD_TRANS_EWALLET_DET_NONBZWBK/atrollback':
+ABINITIO (3.2.7.3): Sun Feb 18 04:53:13 2018
+ABINITIO: Rolling back job from recovery file "/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5a88f755-e200e0-8-EWALLET_LOAD_KHD_TRANS_EWALLET_DET_NONBZWBK.rec".
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5a88f755-e200e0-8-EWALLET_LOAD_KHD_TRANS_EWALLET_DET_NONBZWBK.rec
+info : ++++ FAILED ++++ Job EWALLET_DAILY_LOAD.plan_2018-02-18-04-47-33_18546750

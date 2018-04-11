@@ -19,7 +19,7 @@ def main():
         if len(lineAsList) > 3:
             if lineAsList[2].upper() == 'STANDARD' and lineAsList[3].upper() == 'ERROR':
                 time = lineAsList[0][1:]+' '+lineAsList[1][:-1]
-                source = lineAsList[5]+' '+lineAsList[6]
+                source = lineAsList[5]
                 body = []
                 it2 = 1
                 while len(lines[it+it2]) > 1 and it + it2 < len(lines) - 1:
