@@ -1,0 +1,937 @@
++ planname=RDU_DAILY_TRANSFORMATION_AND_LOAD.plan
++ planpath=/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/
++ runpath=/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan
++ tracking=0
++ [ 0 -eq 1 ]
++ track=
++ cd /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan
++ air sandbox run /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/RDU_DAILY_TRANSFORMATION_AND_LOAD.plan
+info : ++++ STARTED ++++ Job RDU_DAILY_TRANSFORMATION_AND_LOAD.plan_2018-03-28-17-38-23_8978522
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_03.log
+info : Plan tracking to /app/abinitio/data/prod/admin/hd/wh_plans_daily/tracking/airun/RDU_DAILY_TRANSFORMATION_AND_LOAD.plan_2018-03-28-17-38-23_8978522.dom
+info : Plan input pset archived to /app/abinitio/data/prod/admin/hd/wh_plans_daily/parameter/airun/RDU_DAILY_TRANSFORMATION_AND_LOAD.plan_2018-03-28-17-38-23_8978522.pset
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_plans_daily/error/airun/RDU_DAILY_TRANSFORMATION_AND_LOAD.plan_PSET__20382678_2018-03-28-17-38-23.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_plans_daily/log/airun/RDU_DAILY_TRANSFORMATION_AND_LOAD.plan_PSET__38142244_2018-03-28-17-38-23.log
+WARNING: While requesting a resource, a warning was issued.  Request
+will continue.
+  Task/plan name: /RDU_CHECK_BWDD
+  Warning: The resource pool '/app/abinitio/users/aiprod/sand/public/pub_plans/resource/DB_KHD_prod.pool' is out of date in the resource server.
+[2018-03-28 17:39:41] Standard Error for '/Load RDU/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY/perform':
+========= Error from Load_the_data_into_target_tables.SQL_Load_the_tables.000 on p_abinitio =========
+bteq exited with return code -15
+Called as: bteq 
+.sql
++---------+---------+---------+---------+---------+---------+---------+----
+.os /bin/rm /tmp/abtmp_tomcat/runsqlter.28311598.a321a0a-5abbb713-12000dc-3
+6.sql
++---------+---------+---------+---------+---------+---------+---------+----
+.set session transaction ansi
++---------+---------+---------+---------+---------+---------+---------+----
+.set errorout stdout
+ *** Error messages now directed to STDOUT.
++---------+---------+---------+---------+---------+---------+---------+----
+.logon KHD_LIVE/BATCHPD,
+
+ *** Logon successfully completed.
+ *** Teradata Database Release is 15.10.07.02                   
+ *** Teradata Database Version is 15.10.07.02                     
+ *** Transaction Semantics are ANSI.
+ *** Session Character Set Name is 'ASCII'.
+ 
+ *** Total elapsed time was 1 second.
+ 
++---------+---------+---------+---------+---------+---------+---------+----
+SET QUERY_BAND = 'AB_COMPONENT = /app/abinitio/V3-2-7-3/abinitio-V3-2-7-3/P
+rojects/root/components;AB_JOB_PREFIX = pi-a321a0a-5abbb6ef-1710006-7-;AB_
+PLAN_ROOT_PLAN_NAME = RDU_DAILY_TRANSFORMATION_AND_LOAD.plan;AB_GRAPH_NAME
+ = TD_LOAD_GENERIC;AB_PSET_NAME = RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY;AB_
+PLAN_FILE_PLAN_NAME = /app/abinitio/users/aiprod/private_sand/hd_215/wh_pl
+ans_daily/plan/RDU_DAILY_TRANSFORMATION_AND_LOAD.plan;AB_PLAN_TASK_NAME = 
+/Load RDU/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY;' FOR SESSION;
+
+ *** Set QUERY_BAND accepted. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+commit;
+
+ *** COMMIT done. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+SET QUERY_BAND = 'GRAPH_COMPONENT=Load_the_data_into_target_tables.SQL_Load
+_the_tabl;' UPDATE FOR SESSION;
+
+ *** Set QUERY_BAND accepted. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+commit;
+
+ *** COMMIT done. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+ *** Warning: EOF on INPUT stream.
++---------+---------+---------+---------+---------+---------+---------+----
+insert into DDHDD08P.CUSTOMER_INS_REL_DAILY
+(WH_CUST_NO,
+ WH_INS_NO,
+ START_DTE,
+ END_DTE,
+ SRCE_CUST_NO,
+ SRCE_INS_NO,
+ CUST_INS_ROLE_ID,
+ CUST_INS_ROLE_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ LOAD_DTE ,
+ LOAD_TIME)
+ 
+select 
+ WH_CUST_NO,
+ WH_INS_NO,
+ START_DTE,
+ END_DTE,
+ SRCE_CUST_NO,
+ SRCE_INS_NO,
+ CUST_INS_ROLE_ID,
+ CUST_INS_ROLE_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ CURRENT_DATE,
+ cast((CURRENT_TIME(FORMAT 'HH:MI:SS')) as char(8))
+ from DDHDU08P.CUSTOMER_INS_REL_DAILY_5067_T where LOAD_LAST_ACTION in ('I
+','U');
+ *** Failure 2801 Duplicate unique prime key error in DDHDD08P.CUSTOMER_INS_
+ REL_DAILY.
+                Statement# 1, Info =0 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
+.QUIT ERRORCODE;
+ *** You are now logged off from the DBC.
+ *** Exiting BTEQ...
+ *** RC (return code) = 2801
+
+ABINITIO (3.2.7.3): Wed Mar 28 17:39:41 2018
+ABINITIO: Rolling back ... Done.
+ABINITIO: Auto rollback succeeded.
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-7-RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY.rec
+[2018-03-28 17:39:47] Standard Error for '/Load RDU/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY/atrollback':
+ABINITIO (3.2.7.3): Wed Mar 28 17:39:43 2018
+ABINITIO: Rolling back job from recovery file "/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-7-RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY.rec".
+ABINITIO: Job closed; recovery file deleted.
+[2018-03-28 17:39:48] Standard Error for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC/perform':
+========= Error from Load_the_data_into_target_tables.SQL_Load_the_tables.000 on p_abinitio =========
+bteq exited with return code -15
+Called as: bteq 
+_the_tabl;' UPDATE FOR SESSION;
+
+ *** Set QUERY_BAND accepted. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+commit;
+
+ *** COMMIT done. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+ *** Warning: EOF on INPUT stream.
++---------+---------+---------+---------+---------+---------+---------+----
+delete from DDHDD08P.INSURANCE_CHARGE_ACC where (WH_INS_NO) in (select WH_I
+NS_NO from DDHDU08P.INSURANCE_CHARGE_ACC_5067_T);
+
+ *** Delete completed. 1739 rows removed. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
++---------+---------+---------+---------+---------+---------+---------+----
+insert into DDHDD08P.INSURANCE_CHARGE_ACC
+(WH_INS_NO,
+ WH_ACC_NO,
+ SRCE_INS_NO,
+ SRCE_ACC_TYP_CDE,
+ ACC_NO,
+ SRCE_SYS_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ LOAD_DTE ,
+ LOAD_TIME)
+ 
+select 
+ WH_INS_NO,
+ WH_ACC_NO,
+ SRCE_INS_NO,
+ SRCE_ACC_TYP_CDE,
+ ACC_NO,
+ SRCE_SYS_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ CURRENT_DATE,
+ cast((CURRENT_TIME(FORMAT 'HH:MI:SS')) as char(8))
+ from DDHDU08P.INSURANCE_CHARGE_ACC_5067_T where LOAD_LAST_ACTION in ('I',
+'U');
+
+ *** Insert completed. 2959 rows added. 
+ *** Total elapsed time was 2 seconds.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
++---------+---------+---------+---------+---------+---------+---------+----
+insert into DDHDD08P.INS_CHARGE_ACC_STAT_HIST
+(WH_INS_NO,
+ WH_ACC_NO,
+ START_DTE,
+ END_DTE,
+ SRCE_INS_NO,
+ SRCE_ACC_TYP_CDE,
+ ACC_NO,
+ SRCE_SYS_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ LOAD_DTE ,
+ LOAD_TIME)
+ 
+select 
+ WH_INS_NO,
+ WH_ACC_NO,
+ START_DTE,
+ END_DTE,
+ SRCE_INS_NO,
+ SRCE_ACC_TYP_CDE,
+ ACC_NO,
+ SRCE_SYS_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ CURRENT_DATE,
+ cast((CURRENT_TIME(FORMAT 'HH:MI:SS')) as char(8))
+ from DDHDU08P.INSURANCE_CHARGE_ACC_5067_T where LOAD_LAST_ACTION in ('I',
+'U');
+ *** Error 2801 Duplicate unique prime key error in DDHDD08P.INS_CHARGE_AC
+ C_STAT_HIST.
+                  Statement# 1, Info =0 
+ *** Total elapsed time was 3 seconds.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
+.QUIT ERRORCODE;
+ *** You are now logged off from the DBC.
+ *** Exiting BTEQ...
+ *** RC (return code) = 2801
+
+ABINITIO (3.2.7.3): Wed Mar 28 17:39:47 2018
+ABINITIO: Rolling back ... Done.
+ABINITIO: Auto rollback succeeded.
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-9-RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC.rec
+[2018-03-28 17:39:55] Standard Error for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC/atrollback':
+ABINITIO (3.2.7.3): Wed Mar 28 17:39:49 2018
+ABINITIO: Rolling back job from recovery file "/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-9-RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC.rec".
+ABINITIO: Job closed; recovery file deleted.
+[2018-03-28 17:39:55] Standard Error for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL/perform':
+========= Error from Load_the_data_into_target_tables.SQL_Load_the_tables.000 on p_abinitio =========
+bteq exited with return code -15
+Called as: bteq 
+ LOAD_LAST_ACTION,
+ CURRENT_DATE,
+ cast((CURRENT_TIME(FORMAT 'HH:MI:SS')) as char(8))
+ from DDHDU08P.INSURANCE_CONTRACT_DETAIL_5067_T where LOAD_LAST_ACTION in 
+('I','U');
+
+ *** Insert completed. 18520 rows added. 
+ *** Total elapsed time was 2 seconds.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
++---------+---------+---------+---------+---------+---------+---------+----
+insert into DDHDD08P.INSURANCE_CONTR_DET_STAT_HIST
+(WH_INS_NO,
+ START_DTE,
+ END_DTE,
+ INS_CONTRACT_NO,
+ SRCE_INS_NO,
+ INS_APPLICATION_NO,
+ INS_RSK_TYP_CDE,
+ INS_REGISTRATION_DTE,
+ INS_APPLICATION_DTE,
+ INS_POLICY_ISSUE_DTE,
+ INS_POLICY_STATUS_CDE,
+ INS_COVER_START_DTE,
+ INS_COVER_END_DTE,
+ INS_STAT_CDE,
+ INS_RSK_PRIMARY_IND,
+ INS_CLOSE_CAUSE_CDE,
+ INS_CLOSE_DTE,
+ INS_SUM_AMT,
+ ISO_CRNCY_CDE,
+ INS_FREE_PERIOD_START_DTE,
+ INS_FREE_PERIOD_END_DTE,
+ INS_AUTO_RENEWAL_IND,
+ INS_SALE_CHN_CDE,
+ SRCE_SECUR_NO,
+ SECUR_ITEM_NO,
+ INS_SALE_SKP_NO,
+ INS_SALE_ICBS_NO,
+ LEVEL_NAME,
+ INS_DISC_RTE,
+ FIRST_CHARGING_DTE,
+ SRCE_SYS_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ LOAD_DTE ,
+ LOAD_TIME)
+ 
+select 
+ WH_INS_NO,
+ START_DTE,
+ END_DTE,
+ INS_CONTRACT_NO,
+ SRCE_INS_NO,
+ INS_APPLICATION_NO,
+ INS_RSK_TYP_CDE,
+ INS_REGISTRATION_DTE,
+ INS_APPLICATION_DTE,
+ INS_POLICY_ISSUE_DTE,
+ INS_POLICY_STATUS_CDE,
+ INS_COVER_START_DTE,
+ INS_COVER_END_DTE,
+ INS_STAT_CDE,
+ INS_RSK_PRIMARY_IND,
+ INS_CLOSE_CAUSE_CDE,
+ INS_CLOSE_DTE,
+ INS_SUM_AMT,
+ ISO_CRNCY_CDE,
+ INS_FREE_PERIOD_START_DTE,
+ INS_FREE_PERIOD_END_DTE,
+ INS_AUTO_RENEWAL_IND,
+ INS_SALE_CHN_CDE,
+ SRCE_SECUR_NO,
+ SECUR_ITEM_NO,
+ INS_SALE_SKP_NO,
+ INS_SALE_ICBS_NO,
+ LEVEL_NAME,
+ INS_DISC_RTE,
+ FIRST_CHARGING_DTE,
+ SRCE_SYS_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ CURRENT_DATE,
+ cast((CURRENT_TIME(FORMAT 'HH:MI:SS')) as char(8))
+ from DDHDU08P.INSURANCE_CONTRACT_DETAIL_5067_T where LOAD_LAST_ACTION in 
+('I','U');
+ *** Error 2801 Duplicate unique prime key error in DDHDD08P.INSURANCE_CON
+ TR_DET_STAT_HIST.
+                  Statement# 1, Info =0 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
+.QUIT ERRORCODE;
+ *** You are now logged off from the DBC.
+ *** Exiting BTEQ...
+ *** RC (return code) = 2801
+
+ABINITIO (3.2.7.3): Wed Mar 28 17:39:53 2018
+ABINITIO: Rolling back ... Done.
+ABINITIO: Auto rollback succeeded.
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-10-RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL.rec
+[2018-03-28 17:39:56] Standard Error for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_DETAIL/perform':
+========= Error from Load_the_data_into_target_tables.SQL_Load_the_tables.000 on p_abinitio =========
+bteq exited with return code -15
+Called as: bteq 
+delete from DDHDD08P.INSURANCE_DETAIL where (WH_INS_NO) in (select WH_INS_N
+O from DDHDU08P.INSURANCE_DETAIL_5067_T);
+
+ *** Delete completed. 2635 rows removed. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
++---------+---------+---------+---------+---------+---------+---------+----
+insert into DDHDD08P.INSURANCE_DETAIL
+(WH_INS_NO,
+ SRCE_INS_NO,
+ PACKAGE_ID,
+ BANK_PRODUCT_ID,
+ PROD_REF_NO,
+ INS_PROD_CDE,
+ INS_TYP_CDE,
+ INSUR_CDE,
+ SRCE_SYS_CDE,
+ SRCE_SYS_NO,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ LOAD_DTE ,
+ LOAD_TIME)
+ 
+select 
+ WH_INS_NO,
+ SRCE_INS_NO,
+ PACKAGE_ID,
+ BANK_PRODUCT_ID,
+ PROD_REF_NO,
+ INS_PROD_CDE,
+ INS_TYP_CDE,
+ INSUR_CDE,
+ SRCE_SYS_CDE,
+ SRCE_SYS_NO,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ CURRENT_DATE,
+ cast((CURRENT_TIME(FORMAT 'HH:MI:SS')) as char(8))
+ from DDHDU08P.INSURANCE_DETAIL_5067_T where LOAD_LAST_ACTION in ('I','U')
+;
+
+ *** Insert completed. 4140 rows added. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
++---------+---------+---------+---------+---------+---------+---------+----
+insert into DDHDD08P.INSURANCE_DETAIL_STAT_HIST
+(WH_INS_NO,
+ START_DTE,
+ END_DTE,
+ SRCE_INS_NO,
+ PACKAGE_ID,
+ BANK_PRODUCT_ID,
+ PROD_REF_NO,
+ INS_PROD_CDE,
+ INS_TYP_CDE,
+ INSUR_CDE,
+ SRCE_SYS_CDE,
+ SRCE_SYS_NO,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ LOAD_DTE ,
+ LOAD_TIME)
+ 
+select 
+ WH_INS_NO,
+ START_DTE,
+ END_DTE,
+ SRCE_INS_NO,
+ PACKAGE_ID,
+ BANK_PRODUCT_ID,
+ PROD_REF_NO,
+ INS_PROD_CDE,
+ INS_TYP_CDE,
+ INSUR_CDE,
+ SRCE_SYS_CDE,
+ SRCE_SYS_NO,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ CURRENT_DATE,
+ cast((CURRENT_TIME(FORMAT 'HH:MI:SS')) as char(8))
+ from DDHDU08P.INSURANCE_DETAIL_5067_T where LOAD_LAST_ACTION in ('I','U')
+;
+ *** Error 2801 Duplicate unique prime key error in DDHDD08P.INSURANCE_DET
+ AIL_STAT_HIST.
+                  Statement# 1, Info =0 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
+.QUIT ERRORCODE;
+ *** You are now logged off from the DBC.
+ *** Exiting BTEQ...
+ *** RC (return code) = 2801
+
+ABINITIO (3.2.7.3): Wed Mar 28 17:39:55 2018
+ABINITIO: Rolling back ... Done.
+ABINITIO: Auto rollback succeeded.
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-11-RDU_LOAD_DKHD_INSURANCE_DETAIL.rec
+[2018-03-28 17:39:58] Standard Error for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL/atrollback':
+ABINITIO (3.2.7.3): Wed Mar 28 17:39:56 2018
+ABINITIO: Rolling back job from recovery file "/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-10-RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL.rec".
+ABINITIO: Job closed; recovery file deleted.
+[2018-03-28 17:40:00] Standard Error for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_DETAIL/atrollback':
+ABINITIO (3.2.7.3): Wed Mar 28 17:39:57 2018
+ABINITIO: Rolling back job from recovery file "/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-11-RDU_LOAD_DKHD_INSURANCE_DETAIL.rec".
+ABINITIO: Job closed; recovery file deleted.
+[2018-03-28 17:41:01] Standard Error for '/Load RDU/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2_pset/perform':
+========= Error from Load_the_data_into_target_tables.SQL_Load_the_tables.000 on p_abinitio =========
+bteq exited with return code -15
+Called as: bteq 
+sql
++---------+---------+---------+---------+---------+---------+---------+----
+.os /bin/rm /tmp/abtmp_tomcat/runsqlter.25100396.a321a0a-5abbb773-43018e-36
+.sql
++---------+---------+---------+---------+---------+---------+---------+----
+.set session transaction ansi
++---------+---------+---------+---------+---------+---------+---------+----
+.set errorout stdout
+ *** Error messages now directed to STDOUT.
++---------+---------+---------+---------+---------+---------+---------+----
+.logon KHD_LIVE/BATCHPD,
+
+ *** Logon successfully completed.
+ *** Teradata Database Release is 15.10.07.02                   
+ *** Teradata Database Version is 15.10.07.02                     
+ *** Transaction Semantics are ANSI.
+ *** Session Character Set Name is 'ASCII'.
+ 
+ *** Total elapsed time was 1 second.
+ 
++---------+---------+---------+---------+---------+---------+---------+----
+SET QUERY_BAND = 'AB_COMPONENT = /app/abinitio/V3-2-7-3/abinitio-V3-2-7-3/P
+rojects/root/components;AB_JOB_PREFIX = pi-a321a0a-5abbb6ef-1710006-21-;AB
+_PLAN_ROOT_PLAN_NAME = RDU_DAILY_TRANSFORMATION_AND_LOAD.plan;AB_GRAPH_NAM
+E = TD_LOAD_GENERIC;AB_PSET_NAME = RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2;A
+B_PLAN_FILE_PLAN_NAME = /app/abinitio/users/aiprod/private_sand/hd_215/wh_
+plans_daily/plan/RDU_DAILY_TRANSFORMATION_AND_LOAD.plan;AB_PLAN_TASK_NAME 
+= /Load RDU/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2_pset;' FOR SESSION;
+
+ *** Set QUERY_BAND accepted. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+commit;
+
+ *** COMMIT done. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+SET QUERY_BAND = 'GRAPH_COMPONENT=Load_the_data_into_target_tables.SQL_Load
+_the_tabl;' UPDATE FOR SESSION;
+
+ *** Set QUERY_BAND accepted. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+commit;
+
+ *** COMMIT done. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+ *** Warning: EOF on INPUT stream.
++---------+---------+---------+---------+---------+---------+---------+----
+insert into DDHDD08P.CUSTOMER_INS_REL_DAILY2
+(WH_CUST_NO,
+ WH_INS_NO,
+ START_DTE,
+ END_DTE,
+ SRCE_CUST_NO,
+ SRCE_INS_NO,
+ CUST_INS_ROLE_ID,
+ CUST_INS_ROLE_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ LOAD_DTE ,
+ LOAD_TIME)
+ 
+select 
+ WH_CUST_NO,
+ WH_INS_NO,
+ START_DTE,
+ END_DTE,
+ SRCE_CUST_NO,
+ SRCE_INS_NO,
+ CUST_INS_ROLE_ID,
+ CUST_INS_ROLE_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ CURRENT_DATE,
+ cast((CURRENT_TIME(FORMAT 'HH:MI:SS')) as char(8))
+ from DDHDU08P.CUSTOMER_INS_REL_DAILY2_5067_T where LOAD_LAST_ACTION in ('
+I','U');
+ *** Failure 2801 Duplicate unique prime key error in DDHDD08P.CUSTOMER_INS_
+ REL_DAILY2.
+                Statement# 1, Info =0 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
+.QUIT ERRORCODE;
+ *** You are now logged off from the DBC.
+ *** Exiting BTEQ...
+ *** RC (return code) = 2801
+
+ABINITIO (3.2.7.3): Wed Mar 28 17:41:01 2018
+ABINITIO: Rolling back ... Done.
+ABINITIO: Auto rollback succeeded.
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-21-RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2.rec
+[2018-03-28 17:41:04] Standard Error for '/Load RDU/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2_pset/atrollback':
+ABINITIO (3.2.7.3): Wed Mar 28 17:41:03 2018
+ABINITIO: Rolling back job from recovery file "/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-21-RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2.rec".
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-21-RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2.rec
+[2018-03-28 17:41:06] Standard Error for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2_pset/perform':
+========= Error from Load_the_data_into_target_tables.SQL_Load_the_tables.000 on p_abinitio =========
+bteq exited with return code -15
+Called as: bteq 
+_the_tabl;' UPDATE FOR SESSION;
+
+ *** Set QUERY_BAND accepted. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+commit;
+
+ *** COMMIT done. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+ *** Warning: EOF on INPUT stream.
++---------+---------+---------+---------+---------+---------+---------+----
+delete from DDHDD08P.INSURANCE_CHARGE_ACC2 where (WH_INS_NO) in (select WH_
+INS_NO from DDHDU08P.INSURANCE_CHARGE_ACC2_5067_T);
+
+ *** Delete completed. 1294 rows removed. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
++---------+---------+---------+---------+---------+---------+---------+----
+insert into DDHDD08P.INSURANCE_CHARGE_ACC2
+(WH_INS_NO,
+ WH_ACC_NO,
+ SRCE_INS_NO,
+ SRCE_ACC_TYP_CDE,
+ ACC_NO,
+ SRCE_SYS_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ LOAD_DTE ,
+ LOAD_TIME)
+ 
+select 
+ WH_INS_NO,
+ WH_ACC_NO,
+ SRCE_INS_NO,
+ SRCE_ACC_TYP_CDE,
+ ACC_NO,
+ SRCE_SYS_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ CURRENT_DATE,
+ cast((CURRENT_TIME(FORMAT 'HH:MI:SS')) as char(8))
+ from DDHDU08P.INSURANCE_CHARGE_ACC2_5067_T where LOAD_LAST_ACTION in ('I'
+,'U');
+
+ *** Insert completed. 1465 rows added. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
++---------+---------+---------+---------+---------+---------+---------+----
+insert into DDHDD08P.INS_CHARGE_ACC_STAT_HIST2
+(WH_INS_NO,
+ WH_ACC_NO,
+ START_DTE,
+ END_DTE,
+ SRCE_INS_NO,
+ SRCE_ACC_TYP_CDE,
+ ACC_NO,
+ SRCE_SYS_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ LOAD_DTE ,
+ LOAD_TIME)
+ 
+select 
+ WH_INS_NO,
+ WH_ACC_NO,
+ START_DTE,
+ END_DTE,
+ SRCE_INS_NO,
+ SRCE_ACC_TYP_CDE,
+ ACC_NO,
+ SRCE_SYS_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ CURRENT_DATE,
+ cast((CURRENT_TIME(FORMAT 'HH:MI:SS')) as char(8))
+ from DDHDU08P.INSURANCE_CHARGE_ACC2_5067_T where LOAD_LAST_ACTION in ('I'
+,'U');
+ *** Error 2801 Duplicate unique prime key error in DDHDD08P.INS_CHARGE_AC
+ C_STAT_HIST2.
+                  Statement# 1, Info =0 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
+.QUIT ERRORCODE;
+ *** You are now logged off from the DBC.
+ *** Exiting BTEQ...
+ *** RC (return code) = 2801
+
+ABINITIO (3.2.7.3): Wed Mar 28 17:41:05 2018
+ABINITIO: Rolling back ... Done.
+ABINITIO: Auto rollback succeeded.
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-22-RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2.rec
+[2018-03-28 17:41:08] Standard Error for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2_pset/atrollback':
+ABINITIO (3.2.7.3): Wed Mar 28 17:41:08 2018
+ABINITIO: Rolling back job from recovery file "/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-22-RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2.rec".
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-22-RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2.rec
+[2018-03-28 17:41:20] Standard Error for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2_pset/perform':
+========= Error from Load_the_data_into_target_tables.SQL_Load_the_tables.000 on p_abinitio =========
+bteq exited with return code -15
+Called as: bteq 
+ LOAD_LAST_ACTION,
+ CURRENT_DATE,
+ cast((CURRENT_TIME(FORMAT 'HH:MI:SS')) as char(8))
+ from DDHDU08P.INSURANCE_CONTRACT_DETAIL2_5067_T where LOAD_LAST_ACTION in
+ ('I','U');
+
+ *** Insert completed. 4126 rows added. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
++---------+---------+---------+---------+---------+---------+---------+----
+insert into DDHDD08P.INSURANCE_CONTR_DET_STAT_HIST2
+(WH_INS_NO,
+ START_DTE,
+ END_DTE,
+ INS_CONTRACT_NO,
+ SRCE_INS_NO,
+ INS_APPLICATION_NO,
+ INS_RSK_TYP_CDE,
+ INS_REGISTRATION_DTE,
+ INS_APPLICATION_DTE,
+ INS_POLICY_ISSUE_DTE,
+ INS_POLICY_STATUS_CDE,
+ INS_COVER_START_DTE,
+ INS_COVER_END_DTE,
+ INS_STAT_CDE,
+ INS_RSK_PRIMARY_IND,
+ INS_CLOSE_CAUSE_CDE,
+ INS_CLOSE_DTE,
+ INS_SUM_AMT,
+ ISO_CRNCY_CDE,
+ INS_FREE_PERIOD_START_DTE,
+ INS_FREE_PERIOD_END_DTE,
+ INS_AUTO_RENEWAL_IND,
+ INS_SALE_CHN_CDE,
+ SRCE_SECUR_NO,
+ SECUR_ITEM_NO,
+ INS_SALE_SKP_NO,
+ INS_SALE_ICBS_NO,
+ LEVEL_NAME,
+ INS_DISC_RTE,
+ FIRST_CHARGING_DTE,
+ SRCE_SYS_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ LOAD_DTE ,
+ LOAD_TIME)
+ 
+select 
+ WH_INS_NO,
+ START_DTE,
+ END_DTE,
+ INS_CONTRACT_NO,
+ SRCE_INS_NO,
+ INS_APPLICATION_NO,
+ INS_RSK_TYP_CDE,
+ INS_REGISTRATION_DTE,
+ INS_APPLICATION_DTE,
+ INS_POLICY_ISSUE_DTE,
+ INS_POLICY_STATUS_CDE,
+ INS_COVER_START_DTE,
+ INS_COVER_END_DTE,
+ INS_STAT_CDE,
+ INS_RSK_PRIMARY_IND,
+ INS_CLOSE_CAUSE_CDE,
+ INS_CLOSE_DTE,
+ INS_SUM_AMT,
+ ISO_CRNCY_CDE,
+ INS_FREE_PERIOD_START_DTE,
+ INS_FREE_PERIOD_END_DTE,
+ INS_AUTO_RENEWAL_IND,
+ INS_SALE_CHN_CDE,
+ SRCE_SECUR_NO,
+ SECUR_ITEM_NO,
+ INS_SALE_SKP_NO,
+ INS_SALE_ICBS_NO,
+ LEVEL_NAME,
+ INS_DISC_RTE,
+ FIRST_CHARGING_DTE,
+ SRCE_SYS_CDE,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ CURRENT_DATE,
+ cast((CURRENT_TIME(FORMAT 'HH:MI:SS')) as char(8))
+ from DDHDU08P.INSURANCE_CONTRACT_DETAIL2_5067_T where LOAD_LAST_ACTION in
+ ('I','U');
+ *** Error 2801 Duplicate unique prime key error in DDHDD08P.INSURANCE_CON
+ TR_DET_STAT_HIST2.
+                  Statement# 1, Info =0 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
+.QUIT ERRORCODE;
+ *** You are now logged off from the DBC.
+ *** Exiting BTEQ...
+ *** RC (return code) = 2801
+
+ABINITIO (3.2.7.3): Wed Mar 28 17:41:20 2018
+ABINITIO: Rolling back ... Done.
+ABINITIO: Auto rollback succeeded.
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-23-RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2.rec
+[2018-03-28 17:41:23] Standard Error for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2_pset/atrollback':
+ABINITIO (3.2.7.3): Wed Mar 28 17:41:22 2018
+ABINITIO: Rolling back job from recovery file "/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-23-RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2.rec".
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-23-RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2.rec
+[2018-03-28 17:41:24] Standard Error for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_DETAIL2_pset/perform':
+========= Error from Load_the_data_into_target_tables.SQL_Load_the_tables.000 on p_abinitio =========
+bteq exited with return code -15
+Called as: bteq 
+delete from DDHDD08P.INSURANCE_DETAIL2 where (WH_INS_NO) in (select WH_INS_
+NO from DDHDU08P.INSURANCE_DETAIL2_5067_T);
+
+ *** Delete completed. 1724 rows removed. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
++---------+---------+---------+---------+---------+---------+---------+----
+insert into DDHDD08P.INSURANCE_DETAIL2
+(WH_INS_NO,
+ SRCE_INS_NO,
+ PACKAGE_ID,
+ BANK_PRODUCT_ID,
+ PROD_REF_NO,
+ INS_PROD_CDE,
+ INS_TYP_CDE,
+ INSUR_CDE,
+ SRCE_SYS_CDE,
+ SRCE_SYS_NO,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ LOAD_DTE ,
+ LOAD_TIME)
+ 
+select 
+ WH_INS_NO,
+ SRCE_INS_NO,
+ PACKAGE_ID,
+ BANK_PRODUCT_ID,
+ PROD_REF_NO,
+ INS_PROD_CDE,
+ INS_TYP_CDE,
+ INSUR_CDE,
+ SRCE_SYS_CDE,
+ SRCE_SYS_NO,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ CURRENT_DATE,
+ cast((CURRENT_TIME(FORMAT 'HH:MI:SS')) as char(8))
+ from DDHDU08P.INSURANCE_DETAIL2_5067_T where LOAD_LAST_ACTION in ('I','U'
+);
+
+ *** Insert completed. 1646 rows added. 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
++---------+---------+---------+---------+---------+---------+---------+----
+insert into DDHDD08P.INSURANCE_DETAIL_STAT_HIST2
+(WH_INS_NO,
+ START_DTE,
+ END_DTE,
+ SRCE_INS_NO,
+ PACKAGE_ID,
+ BANK_PRODUCT_ID,
+ PROD_REF_NO,
+ INS_PROD_CDE,
+ INS_TYP_CDE,
+ INSUR_CDE,
+ SRCE_SYS_CDE,
+ SRCE_SYS_NO,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ LOAD_DTE ,
+ LOAD_TIME)
+ 
+select 
+ WH_INS_NO,
+ START_DTE,
+ END_DTE,
+ SRCE_INS_NO,
+ PACKAGE_ID,
+ BANK_PRODUCT_ID,
+ PROD_REF_NO,
+ INS_PROD_CDE,
+ INS_TYP_CDE,
+ INSUR_CDE,
+ SRCE_SYS_CDE,
+ SRCE_SYS_NO,
+ SRCE_SYS,
+ LOAD_LAST_ACTION,
+ CURRENT_DATE,
+ cast((CURRENT_TIME(FORMAT 'HH:MI:SS')) as char(8))
+ from DDHDU08P.INSURANCE_DETAIL2_5067_T where LOAD_LAST_ACTION in ('I','U'
+);
+ *** Error 2801 Duplicate unique prime key error in DDHDD08P.INSURANCE_DET
+ AIL_STAT_HIST2.
+                  Statement# 1, Info =0 
+ *** Total elapsed time was 1 second.
+
+
++---------+---------+---------+---------+---------+---------+---------+----
+.IF ERRORCODE <> 0 THEN .QUIT ERRORCODE;
+.QUIT ERRORCODE;
+ *** You are now logged off from the DBC.
+ *** Exiting BTEQ...
+ *** RC (return code) = 2801
+
+ABINITIO (3.2.7.3): Wed Mar 28 17:41:23 2018
+ABINITIO: Rolling back ... Done.
+ABINITIO: Auto rollback succeeded.
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-24-RDU_LOAD_DKHD_INSURANCE_DETAIL2.rec
+[2018-03-28 17:41:26] Standard Error for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_DETAIL2_pset/atrollback':
+ABINITIO (3.2.7.3): Wed Mar 28 17:41:26 2018
+ABINITIO: Rolling back job from recovery file "/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-24-RDU_LOAD_DKHD_INSURANCE_DETAIL2.rec".
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5abbb6ef-1710006-24-RDU_LOAD_DKHD_INSURANCE_DETAIL2.rec
+info : ++++ FAILED ++++ Job RDU_DAILY_TRANSFORMATION_AND_LOAD.plan_2018-03-28-17-38-23_8978522
