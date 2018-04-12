@@ -27,7 +27,7 @@ def main():
                     it2+=1
 
 
-                print("ERROR DETECTED ON {} IN {}\nERROR MESSAGE:\n{}\n".format(time, source, "\n".join(body) ))
+                print("\n\n\nERROR DETECTED ON {} IN {}\nERROR MESSAGE:\n{}\n\n".format(time, source, "\n".join(body) ))
 
 
 
