@@ -162,15 +162,10 @@ def calculateTimes(collection, dependencies):
 
 
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("inputFile", help="Address of input log file", type=str)
-    parser.add_argument("dependenciesFile", help="Address of input log file", type=str)
-    args = parser.parse_args()
+def main(inputFile, dependenciesFile):
+    lines = readFile(inputFile)
 
-    lines = readFile(args.inputFile)
-
-    csv = readCSVFile(args.dependenciesFile)
+    csv = readCSVFile(dependenciesFile)
     #
     # for line in csv:
     #     print(line)
@@ -207,4 +202,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("inputFile", help="Address of input log file", type=str)
+    parser.add_argument("dependenciesFile", help="Address of input log file", type=str)
+    args = parser.parse_args()
+    main(args.inputFile, args.dependenciesFile)
