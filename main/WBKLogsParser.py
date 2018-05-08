@@ -50,7 +50,7 @@ def getTypeNameTime(line):
 
     name = parseTaskName(items[-1].split('_')[0])
 
-    date = items[-1].split('_')[1].split('-')
+    date = items[-1].split('_')[-2].split('-')
     time = str(int(date[3])*3600+int(date[4])*60+int(date[5]))
 
     return type, name, time

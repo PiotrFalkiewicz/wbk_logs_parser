@@ -55,4 +55,4 @@ if __name__ == "__main__":
     parser.add_argument("countOfLogs", help="Count of logs to be analyzed", type=int)
     parser.add_argument("dependenciesFile", help="Address of input dependencies csv file", type=str)
     args = parser.parse_args()
-    main(args.planname, args.inputDirectory, args.numOfLogs, args.dependenciesFile)
+    main(args.planname, args.inputDirectory, args.countOfLogs, args.dependenciesFile)
