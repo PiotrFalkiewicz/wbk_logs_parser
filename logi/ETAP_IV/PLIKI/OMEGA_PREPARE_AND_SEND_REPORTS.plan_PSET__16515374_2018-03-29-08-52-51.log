@@ -1,0 +1,64 @@
+[2018-03-29 08:52:51] Plan File: /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/OMEGA_PREPARE_AND_SEND_REPORTS.plan
+[2018-03-29 08:52:51] Recovery File: /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/OMEGA_PREPARE_AND_SEND_REPORTS.rec
+[2018-03-29 08:52:51] Beginning plan '/'
+[2018-03-29 08:53:01] Standard Output for '/ TD_LOAD_GENERIC_ANY_TABLE_TECH_OMEGA_RATING_NO_TECH pset/perform':
+info : ++++ STARTED ++++ Job TD_LOAD_GENERIC_ANY_TABLE_TECH_OMEGA_RATING_NO_TECH_2018-03-29-08-52-56_13893844
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_03.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_REPORTS/tracking/airun/TD_LOAD_GENERIC_ANY_TABLE_TECH_OMEGA_RATING_NO_TECH_2018-03-29-08-52-56_13893844.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_REPORTS/parameter/airun/TD_LOAD_GENERIC_ANY_TABLE_TECH_OMEGA_RATING_NO_TECH_2018-03-29-08-52-56_13893844.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_REPORTS/error/airun/TD_LOAD_GENERIC_ANY_TABLE_TECH_OMEGA_RATING_NO_TECH_PSET_TD_LOAD_GENERIC_ANY_TABLE_TECH_OMEGA_RATING_NO_TECH_49676362_2018-03-29-08-52-56.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_REPORTS/log/airun/TD_LOAD_GENERIC_ANY_TABLE_TECH_OMEGA_RATING_NO_TECH_PSET_TD_LOAD_GENERIC_ANY_TABLE_TECH_OMEGA_RATING_NO_TECH_16515386_2018-03-29-08-52-56.log
+[2018-03-29 08:53:50] Standard Output for '/ TD_LOAD_GENERIC_ANY_TABLE_TECH_OMEGA_RATING_NO_TECH pset/perform':
+info : ++++ COMPLETED ++++ Job TD_LOAD_GENERIC_ANY_TABLE_TECH_OMEGA_RATING_NO_TECH_2018-03-29-08-52-56_13893844
+[2018-03-29 08:54:04] Standard Output for '/EXT_KHD_GENERIC_DKHD_RATING_SWWR_ATTRIBUTE_pset/perform':
+info : ++++ STARTED ++++ Job EXT_KHD_GENERIC_DKHD_RATING_SWWR_ATTRIBUTE_2018-03-29-08-54-02_48496888
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_03.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_REPORTS/tracking/airun/EXT_KHD_GENERIC_DKHD_RATING_SWWR_ATTRIBUTE_2018-03-29-08-54-02_48496888.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_REPORTS/parameter/airun/EXT_KHD_GENERIC_DKHD_RATING_SWWR_ATTRIBUTE_2018-03-29-08-54-02_48496888.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_REPORTS/error/airun/EXT_KHD_GENERIC_DKHD_RATING_SWWR_ATTRIBUTE_PSET_EXT_KHD_GENERIC_DKHD_RATING_SWWR_ATTRIBUTE_8388710_2018-03-29-08-54-02.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_REPORTS/log/airun/EXT_KHD_GENERIC_DKHD_RATING_SWWR_ATTRIBUTE_PSET_EXT_KHD_GENERIC_DKHD_RATING_SWWR_ATTRIBUTE_5177436_2018-03-29-08-54-02.log
+[2018-03-29 08:54:33] Standard Output for '/EXT_KHD_GENERIC_DKHD_RATING_SWWR_ATTRIBUTE_pset/perform':
+info : ++++ COMPLETED ++++ Job EXT_KHD_GENERIC_DKHD_RATING_SWWR_ATTRIBUTE_2018-03-29-08-54-02_48496888
+[2018-03-29 08:55:11] Standard Output for '/EXT_KHD_GENERIC_DKHD_DICTIONARIES_VALUES/perform':
+info : ++++ STARTED ++++ Job EXT_KHD_GENERIC_DKHD_DICTIONARIES_VALUES_2018-03-29-08-55-09_47054928
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_03.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_REPORTS/tracking/airun/EXT_KHD_GENERIC_DKHD_DICTIONARIES_VALUES_2018-03-29-08-55-09_47054928.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_REPORTS/parameter/airun/EXT_KHD_GENERIC_DKHD_DICTIONARIES_VALUES_2018-03-29-08-55-09_47054928.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_REPORTS/error/airun/EXT_KHD_GENERIC_DKHD_DICTIONARIES_VALUES_PSET_EXT_KHD_GENERIC_DKHD_DICTIONARIES_VALUES_5243646_2018-03-29-08-55-09.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_REPORTS/log/airun/EXT_KHD_GENERIC_DKHD_DICTIONARIES_VALUES_PSET_EXT_KHD_GENERIC_DKHD_DICTIONARIES_VALUES_12976920_2018-03-29-08-55-09.log
+[2018-03-29 08:55:28] Standard Output for '/EXT_KHD_GENERIC_DKHD_DICTIONARIES_VALUES/perform':
+info : ++++ COMPLETED ++++ Job EXT_KHD_GENERIC_DKHD_DICTIONARIES_VALUES_2018-03-29-08-55-09_47054928
+[2018-03-29 08:55:32] Standard Output for '/REPORTS_TRNS_OMEGA_1_CRW_SWWR_mp/perform':
+info : ++++ STARTED ++++ Job REPORTS_TRNS_OMEGA_1_CRW_SWWR_2018-03-29-08-55-30_8257668
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_03.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_REPORTS/tracking/airun/REPORTS_TRNS_OMEGA_1_CRW_SWWR_2018-03-29-08-55-30_8257668.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_REPORTS/parameter/airun/REPORTS_TRNS_OMEGA_1_CRW_SWWR_2018-03-29-08-55-30_8257668.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_REPORTS/error/airun/REPORTS_TRNS_OMEGA_1_CRW_SWWR_PSET__17499098_2018-03-29-08-55-30.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_REPORTS/log/airun/REPORTS_TRNS_OMEGA_1_CRW_SWWR_PSET__11927612_2018-03-29-08-55-30.log
+[2018-03-29 08:58:44] Standard Output for '/REPORTS_TRNS_OMEGA_1_CRW_SWWR_mp/perform':
+info : ++++ COMPLETED ++++ Job REPORTS_TRNS_OMEGA_1_CRW_SWWR_2018-03-29-08-55-30_8257668
+[2018-03-29 08:58:46] Standard Output for '/OMEGA_SEND_TO_TRAGARZ/perform':
+info : ++++ STARTED ++++ Job OMEGA_SEND_TO_TRAGARZ_2018-03-29-08-58-44_22413868
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_03.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_REPORTS/tracking/airun/OMEGA_SEND_TO_TRAGARZ_2018-03-29-08-58-44_22413868.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_REPORTS/parameter/airun/OMEGA_SEND_TO_TRAGARZ_2018-03-29-08-58-44_22413868.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_REPORTS/error/airun/OMEGA_SEND_TO_TRAGARZ_PSET__22413870_2018-03-29-08-58-44.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_REPORTS/log/airun/OMEGA_SEND_TO_TRAGARZ_PSET__41025980_2018-03-29-08-58-44.log
+[2018-03-29 08:58:50] Standard Output for '/OMEGA_SEND_TO_TRAGARZ/perform':
+info : ++++ COMPLETED ++++ Job OMEGA_SEND_TO_TRAGARZ_2018-03-29-08-58-44_22413868
+[2018-03-29 08:58:50] Completed plan '/' (status=Success)

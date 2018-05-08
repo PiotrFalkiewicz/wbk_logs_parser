@@ -1,0 +1,76 @@
+[2018-04-06 06:49:57] Plan File: /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/RDS_DAILY_TRANSFORMATION_AND_LOAD.plan
+[2018-04-06 06:49:57] Recovery File: /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/RDS_DAILY_TRANSFORMATION_AND_LOAD.rec
+[2018-04-06 06:49:57] Beginning plan '/'
+[2018-04-06 06:50:00] Standard Output for '/RDS_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN/perform':
+info : ++++ STARTED ++++ Job RDS_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_2018-04-06-06-49-59_9241198
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDS/tracking/airun/RDS_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_2018-04-06-06-49-59_9241198.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDS/parameter/airun/RDS_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_2018-04-06-06-49-59_9241198.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDS/error/airun/RDS_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_PSET_RDS_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_14877544_2018-04-06-06-49-59.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDS/log/airun/RDS_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_PSET_RDS_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_26804480_2018-04-06-06-49-59.log
+[2018-04-06 06:50:09] Standard Output for '/RDS_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN/perform':
+info : ++++ COMPLETED ++++ Job RDS_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_2018-04-06-06-49-59_9241198
+[2018-04-06 06:51:49] Standard Output for '/EXT_RDS_GENERIC_KHD_PRODUCT_BZWBK_EGERIA/perform':
+info : ++++ STARTED ++++ Job EXT_RDS_GENERIC_KHD_PRODUCT_BZWBK_EGERIA_2018-04-06-06-51-47_34865180
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDS/tracking/airun/EXT_RDS_GENERIC_KHD_PRODUCT_BZWBK_EGERIA_2018-04-06-06-51-47_34865180.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDS/parameter/airun/EXT_RDS_GENERIC_KHD_PRODUCT_BZWBK_EGERIA_2018-04-06-06-51-47_34865180.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDS/error/airun/EXT_RDS_GENERIC_KHD_PRODUCT_BZWBK_EGERIA_PSET_EXT_RDS_GENERIC_KHD_PRODUCT_BZWBK_EGERIA_7864976_2018-04-06-06-51-47.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDS/log/airun/EXT_RDS_GENERIC_KHD_PRODUCT_BZWBK_EGERIA_PSET_EXT_RDS_GENERIC_KHD_PRODUCT_BZWBK_EGERIA_10355238_2018-04-06-06-51-47.log
+[2018-04-06 06:52:04] Standard Output for '/EXT_RDS_GENERIC_KHD_PRODUCT_BZWBK_EGERIA/perform':
+info : ++++ COMPLETED ++++ Job EXT_RDS_GENERIC_KHD_PRODUCT_BZWBK_EGERIA_2018-04-06-06-51-47_34865180
+[2018-04-06 06:52:07] Standard Output for '/RDS_TRNS_PROD_BZWBK_GRP_RDS/perform':
+info : ++++ STARTED ++++ Job RDS_TRNS_PROD_BZWBK_GRP_RDS_2018-04-06-06-52-06_17760952
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDS/tracking/airun/RDS_TRNS_PROD_BZWBK_GRP_RDS_2018-04-06-06-52-06_17760952.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDS/parameter/airun/RDS_TRNS_PROD_BZWBK_GRP_RDS_2018-04-06-06-52-06_17760952.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDS/error/airun/RDS_TRNS_PROD_BZWBK_GRP_RDS_PSET__20316984_2018-04-06-06-52-06.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDS/log/airun/RDS_TRNS_PROD_BZWBK_GRP_RDS_PSET__17694990_2018-04-06-06-52-06.log
+[2018-04-06 06:53:50] Standard Output for '/RDS_TRNS_PROD_BZWBK_GRP_RDS/perform':
+info : ++++ COMPLETED ++++ Job RDS_TRNS_PROD_BZWBK_GRP_RDS_2018-04-06-06-52-06_17760952
+[2018-04-06 06:54:31] Standard Output for '/RDS_TD_LOAD_ANY_TABLE_GENERIC_RDS_DETAILS/perform':
+info : ++++ STARTED ++++ Job RDS_TD_LOAD_ANY_TABLE_GENERIC_RDS_DETAILS_2018-04-06-06-54-26_13107454
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDS/tracking/airun/RDS_TD_LOAD_ANY_TABLE_GENERIC_RDS_DETAILS_2018-04-06-06-54-26_13107454.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDS/parameter/airun/RDS_TD_LOAD_ANY_TABLE_GENERIC_RDS_DETAILS_2018-04-06-06-54-26_13107454.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDS/error/airun/RDS_TD_LOAD_ANY_TABLE_GENERIC_RDS_DETAILS_PSET_RDS_TD_LOAD_ANY_TABLE_GENERIC_RDS_DETAILS_13303952_2018-04-06-06-54-26.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDS/log/airun/RDS_TD_LOAD_ANY_TABLE_GENERIC_RDS_DETAILS_PSET_RDS_TD_LOAD_ANY_TABLE_GENERIC_RDS_DETAILS_19530428_2018-04-06-06-54-26.log
+[2018-04-06 06:54:35] Standard Output for '/RDS_LOAD_MIS01_PROD_BZWBK_GRP_RDS/perform':
+info : ++++ STARTED ++++ Job RDS_LOAD_MIS01_PROD_BZWBK_GRP_RDS_2018-04-06-06-54-30_9962288
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDS/tracking/airun/RDS_LOAD_MIS01_PROD_BZWBK_GRP_RDS_2018-04-06-06-54-30_9962288.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDS/parameter/airun/RDS_LOAD_MIS01_PROD_BZWBK_GRP_RDS_2018-04-06-06-54-30_9962288.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDS/error/airun/RDS_LOAD_MIS01_PROD_BZWBK_GRP_RDS_PSET__19006168_2018-04-06-06-54-30.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDS/log/airun/RDS_LOAD_MIS01_PROD_BZWBK_GRP_RDS_PSET__20775752_2018-04-06-06-54-30.log
+[2018-04-06 06:55:12] Standard Output for '/RDS_TD_LOAD_ANY_TABLE_GENERIC_RDS_DETAILS/perform':
+info : ++++ COMPLETED ++++ Job RDS_TD_LOAD_ANY_TABLE_GENERIC_RDS_DETAILS_2018-04-06-06-54-26_13107454
+[2018-04-06 06:55:27] Standard Output for '/RDS_LOAD_MIS01_PROD_BZWBK_GRP_RDS/perform':
+info : ++++ COMPLETED ++++ Job RDS_LOAD_MIS01_PROD_BZWBK_GRP_RDS_2018-04-06-06-54-30_9962288
+[2018-04-06 06:57:25] Standard Output for '/RDS_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN/perform':
+info : ++++ STARTED ++++ Job RDS_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_2018-04-06-06-57-23_36438386
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDS/tracking/airun/RDS_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_2018-04-06-06-57-23_36438386.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDS/parameter/airun/RDS_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_2018-04-06-06-57-23_36438386.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDS/error/airun/RDS_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_PSET_RDS_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_42467506_2018-04-06-06-57-23.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDS/log/airun/RDS_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_PSET_RDS_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_15204894_2018-04-06-06-57-23.log
+[2018-04-06 06:57:35] Standard Output for '/RDS_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN/perform':
+info : ++++ COMPLETED ++++ Job RDS_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_2018-04-06-06-57-23_36438386
+[2018-04-06 06:57:35] Completed plan '/' (status=Success)

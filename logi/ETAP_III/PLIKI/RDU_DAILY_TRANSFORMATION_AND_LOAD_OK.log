@@ -1,0 +1,226 @@
+[2018-04-04 18:15:24] Plan File: /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/RDU_DAILY_TRANSFORMATION_AND_LOAD.plan
+[2018-04-04 18:15:24] Recovery File: /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/RDU_DAILY_TRANSFORMATION_AND_LOAD.rec
+[2018-04-04 18:15:24] Beginning plan '/'
+[2018-04-04 18:15:50] Standard Output for '/RDU_CHECK_BWDD/perform':
+info : ++++ STARTED ++++ Job RDU_CHECK_BWDD_2018-04-04-18-15-47_11338124
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_CHECK_BWDD_2018-04-04-18-15-47_11338124.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_CHECK_BWDD_2018-04-04-18-15-47_11338124.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_CHECK_BWDD_PSET_RDU_CHECK_BWDD_5636806_2018-04-04-18-15-47.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_CHECK_BWDD_PSET_RDU_CHECK_BWDD_13239244_2018-04-04-18-15-47.log
+[2018-04-04 18:16:05] Standard Output for '/RDU_CHECK_BWDD/perform':
+info : ++++ COMPLETED ++++ Job RDU_CHECK_BWDD_2018-04-04-18-15-47_11338124
+[2018-04-04 18:16:19] Standard Output for '/RDU_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_2018-04-04-18-16-15_34603528
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_2018-04-04-18-16-15_34603528.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_2018-04-04-18-16-15_34603528.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_PSET_RDU_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_12059072_2018-04-04-18-16-15.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_PSET_RDU_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_14943194_2018-04-04-18-16-15.log
+[2018-04-04 18:16:34] Standard Output for '/RDU_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_2018-04-04-18-16-15_34603528
+[2018-04-04 18:16:35] Beginning subplan '/Load RDU'
+[2018-04-04 18:17:12] Standard Output for '/Load RDU/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY_2018-04-04-18-16-52_43975134
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY_2018-04-04-18-16-52_43975134.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY_2018-04-04-18-16-52_43975134.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY_PSET_RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY_29426336_2018-04-04-18-16-52.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY_PSET_RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY_34930942_2018-04-04-18-16-52.log
+[2018-04-04 18:17:31] Parameter evaluation for dynamic script generation took 21.51 seconds for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_ACC_REL_pset/perform'
+[2018-04-04 18:17:31] Standard Output for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_ACC_REL_pset/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_DKHD_INSURANCE_ACC_REL_2018-04-04-18-17-03_4719014
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_DKHD_INSURANCE_ACC_REL_2018-04-04-18-17-03_4719014.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_DKHD_INSURANCE_ACC_REL_2018-04-04-18-17-03_4719014.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_DKHD_INSURANCE_ACC_REL_PSET_RDU_LOAD_DKHD_INSURANCE_ACC_REL_16318874_2018-04-04-18-17-03.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_DKHD_INSURANCE_ACC_REL_PSET_RDU_LOAD_DKHD_INSURANCE_ACC_REL_28639612_2018-04-04-18-17-03.log
+[2018-04-04 18:17:49] Standard Output for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC_2018-04-04-18-17-24_14483994
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC_2018-04-04-18-17-24_14483994.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC_2018-04-04-18-17-24_14483994.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC_PSET_RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC_27000886_2018-04-04-18-17-24.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC_PSET_RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC_34537976_2018-04-04-18-17-24.log
+[2018-04-04 18:18:08] Standard Output for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL_2018-04-04-18-17-42_10682726
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL_2018-04-04-18-17-42_10682726.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL_2018-04-04-18-17-42_10682726.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL_PSET_RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL_28442850_2018-04-04-18-17-42.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL_PSET_RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL_21758268_2018-04-04-18-17-42.log
+[2018-04-04 18:18:25] Standard Output for '/Load RDU/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY_2018-04-04-18-16-52_43975134
+[2018-04-04 18:18:28] Standard Output for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_DETAIL/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_DKHD_INSURANCE_DETAIL_2018-04-04-18-18-01_34800142
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_DKHD_INSURANCE_DETAIL_2018-04-04-18-18-01_34800142.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_DKHD_INSURANCE_DETAIL_2018-04-04-18-18-01_34800142.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_DKHD_INSURANCE_DETAIL_PSET_RDU_LOAD_DKHD_INSURANCE_DETAIL_27918382_2018-04-04-18-18-01.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_DKHD_INSURANCE_DETAIL_PSET_RDU_LOAD_DKHD_INSURANCE_DETAIL_38863064_2018-04-04-18-18-01.log
+[2018-04-04 18:18:44] Standard Output for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_ACC_REL_pset/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_DKHD_INSURANCE_ACC_REL_2018-04-04-18-17-03_4719014
+[2018-04-04 18:18:47] Parameter evaluation for dynamic script generation took 21.80 seconds for '/Load RDU/RDU_LOAD_KHD_INSURANCE_FUND_OPERATION/perform'
+[2018-04-04 18:18:47] Standard Output for '/Load RDU/RDU_LOAD_KHD_INSURANCE_FUND_OPERATION/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_KHD_INSURANCE_FUND_OPERATION_2018-04-04-18-18-20_28705418
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_KHD_INSURANCE_FUND_OPERATION_2018-04-04-18-18-20_28705418.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_KHD_INSURANCE_FUND_OPERATION_2018-04-04-18-18-20_28705418.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_KHD_INSURANCE_FUND_OPERATION_PSET_RDU_LOAD_KHD_INSURANCE_FUND_OPERATION_19727322_2018-04-04-18-18-20.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_KHD_INSURANCE_FUND_OPERATION_PSET_RDU_LOAD_KHD_INSURANCE_FUND_OPERATION_28508362_2018-04-04-18-18-20.log
+[2018-04-04 18:19:05] Standard Output for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC_2018-04-04-18-17-24_14483994
+[2018-04-04 18:19:08] Parameter evaluation for dynamic script generation took 23.84 seconds for '/Load RDU/RDU_LOAD_KHD_INSURANCE_FUND_OPER_DETAIL/perform'
+[2018-04-04 18:19:08] Standard Output for '/Load RDU/RDU_LOAD_KHD_INSURANCE_FUND_OPER_DETAIL/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_KHD_INSURANCE_FUND_OPER_DETAIL_2018-04-04-18-18-39_13959694
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_KHD_INSURANCE_FUND_OPER_DETAIL_2018-04-04-18-18-39_13959694.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_KHD_INSURANCE_FUND_OPER_DETAIL_2018-04-04-18-18-39_13959694.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_KHD_INSURANCE_FUND_OPER_DETAIL_PSET_RDU_LOAD_KHD_INSURANCE_FUND_OPER_DETAIL_33620456_2018-04-04-18-18-39.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_KHD_INSURANCE_FUND_OPER_DETAIL_PSET_RDU_LOAD_KHD_INSURANCE_FUND_OPER_DETAIL_29426370_2018-04-04-18-18-39.log
+[2018-04-04 18:19:25] Parameter evaluation for dynamic script generation took 20.56 seconds for '/Load RDU/RDU_LOAD_KHD_INSURANCE_FUND_PRICE/perform'
+[2018-04-04 18:19:26] Standard Output for '/Load RDU/RDU_LOAD_KHD_INSURANCE_FUND_PRICE/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_KHD_INSURANCE_FUND_PRICE_2018-04-04-18-18-58_15663542
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_KHD_INSURANCE_FUND_PRICE_2018-04-04-18-18-58_15663542.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_KHD_INSURANCE_FUND_PRICE_2018-04-04-18-18-58_15663542.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_KHD_INSURANCE_FUND_PRICE_PSET_RDU_LOAD_KHD_INSURANCE_FUND_PRICE_11076248_2018-04-04-18-18-58.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_KHD_INSURANCE_FUND_PRICE_PSET_RDU_LOAD_KHD_INSURANCE_FUND_PRICE_45547710_2018-04-04-18-18-58.log
+[2018-04-04 18:19:41] Standard Output for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_DETAIL/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_DKHD_INSURANCE_DETAIL_2018-04-04-18-18-01_34800142
+[2018-04-04 18:19:41] Standard Output for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL_2018-04-04-18-17-42_10682726
+[2018-04-04 18:19:42] Standard Output for '/Load RDU/RDU_LOAD_KHD_INSURANCE_PAID_PREMIUM/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_KHD_INSURANCE_PAID_PREMIUM_2018-04-04-18-19-19_7537230
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_KHD_INSURANCE_PAID_PREMIUM_2018-04-04-18-19-19_7537230.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_KHD_INSURANCE_PAID_PREMIUM_2018-04-04-18-19-19_7537230.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_KHD_INSURANCE_PAID_PREMIUM_PSET_RDU_LOAD_KHD_INSURANCE_PAID_PREMIUM_20513724_2018-04-04-18-19-19.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_KHD_INSURANCE_PAID_PREMIUM_PSET_RDU_LOAD_KHD_INSURANCE_PAID_PREMIUM_19727334_2018-04-04-18-19-19.log
+[2018-04-04 18:19:52] Standard Output for '/Load RDU/RDU_LOAD_KHD_INSURANCE_PRODUCT_REF/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_KHD_INSURANCE_PRODUCT_REF_2018-04-04-18-19-34_10813886
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_KHD_INSURANCE_PRODUCT_REF_2018-04-04-18-19-34_10813886.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_KHD_INSURANCE_PRODUCT_REF_2018-04-04-18-19-34_10813886.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_KHD_INSURANCE_PRODUCT_REF_PSET_RDU_LOAD_KHD_INSURANCE_PRODUCT_REF_3802066_2018-04-04-18-19-34.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_KHD_INSURANCE_PRODUCT_REF_PSET_RDU_LOAD_KHD_INSURANCE_PRODUCT_REF_36438442_2018-04-04-18-19-34.log
+[2018-04-04 18:20:02] Standard Output for '/Load RDU/RDU_LOAD_KHD_INSURANCE_FUND_OPERATION/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_KHD_INSURANCE_FUND_OPERATION_2018-04-04-18-18-20_28705418
+[2018-04-04 18:20:17] Standard Output for '/Load RDU/RDU_LOAD_KHD_INSURANCE_FUND_OPER_DETAIL/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_KHD_INSURANCE_FUND_OPER_DETAIL_2018-04-04-18-18-39_13959694
+[2018-04-04 18:20:28] Standard Output for '/Load RDU/RDU_LOAD_KHD_INSURANCE_FUND_PRICE/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_KHD_INSURANCE_FUND_PRICE_2018-04-04-18-18-58_15663542
+[2018-04-04 18:20:54] Standard Output for '/Load RDU/RDU_LOAD_KHD_INSURANCE_PRODUCT_REF/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_KHD_INSURANCE_PRODUCT_REF_2018-04-04-18-19-34_10813886
+[2018-04-04 18:21:04] Standard Output for '/Load RDU/RDU_LOAD_KHD_INSURANCE_PAID_PREMIUM/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_KHD_INSURANCE_PAID_PREMIUM_2018-04-04-18-19-19_7537230
+[2018-04-04 18:23:33] Standard Output for '/Load RDU/RDU_EXT_KHD_INSURANCE_FUND_PRICE_LOADED_PRICE_DTE/perform':
+info : ++++ STARTED ++++ Job RDU_EXT_KHD_INSURANCE_FUND_PRICE_LOADED_PRICE_DTE_2018-04-04-18-23-27_38535678
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_EXT_KHD_INSURANCE_FUND_PRICE_LOADED_PRICE_DTE_2018-04-04-18-23-27_38535678.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_EXT_KHD_INSURANCE_FUND_PRICE_LOADED_PRICE_DTE_2018-04-04-18-23-27_38535678.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_EXT_KHD_INSURANCE_FUND_PRICE_LOADED_PRICE_DTE_PSET_RDU_EXT_KHD_INSURANCE_FUND_PRICE_LOADED_PRICE_DTE_38535424_2018-04-04-18-23-27.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_EXT_KHD_INSURANCE_FUND_PRICE_LOADED_PRICE_DTE_PSET_RDU_EXT_KHD_INSURANCE_FUND_PRICE_LOADED_PRICE_DTE_6946982_2018-04-04-18-23-27.log
+[2018-04-04 18:23:49] Standard Output for '/Load RDU/RDU_EXT_KHD_INSURANCE_FUND_PRICE_LOADED_PRICE_DTE/perform':
+info : ++++ COMPLETED ++++ Job RDU_EXT_KHD_INSURANCE_FUND_PRICE_LOADED_PRICE_DTE_2018-04-04-18-23-27_38535678
+[2018-04-04 18:27:20] Standard Output for '/Load RDU/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2_pset/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2_2018-04-04-18-27-09_16253522
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2_2018-04-04-18-27-09_16253522.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2_2018-04-04-18-27-09_16253522.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2_PSET_RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2_2294708_2018-04-04-18-27-09.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2_PSET_RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2_43909616_2018-04-04-18-27-09.log
+[2018-04-04 18:28:11] Standard Output for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2_pset/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2_2018-04-04-18-27-56_9175960
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2_2018-04-04-18-27-56_9175960.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2_2018-04-04-18-27-56_9175960.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2_PSET_RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2_38339002_2018-04-04-18-27-56.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2_PSET_RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2_32112754_2018-04-04-18-27-56.log
+[2018-04-04 18:28:33] Standard Output for '/Load RDU/RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2_pset/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_DKHD_CUSTOMER_INS_REL_DAILY2_2018-04-04-18-27-09_16253522
+[2018-04-04 18:28:45] Standard Output for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_DETAIL2_pset/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_DKHD_INSURANCE_DETAIL2_2018-04-04-18-28-24_5047172
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_DKHD_INSURANCE_DETAIL2_2018-04-04-18-28-24_5047172.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_DKHD_INSURANCE_DETAIL2_2018-04-04-18-28-24_5047172.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_DKHD_INSURANCE_DETAIL2_PSET_RDU_LOAD_DKHD_INSURANCE_DETAIL2_20709626_2018-04-04-18-28-24.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_DKHD_INSURANCE_DETAIL2_PSET_RDU_LOAD_DKHD_INSURANCE_DETAIL2_41877890_2018-04-04-18-28-24.log
+[2018-04-04 18:29:02] Standard Output for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2_pset/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2_2018-04-04-18-28-35_26084108
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2_2018-04-04-18-28-35_26084108.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2_2018-04-04-18-28-35_26084108.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2_PSET_RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2_51445848_2018-04-04-18-28-35.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2_PSET_RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2_26084110_2018-04-04-18-28-35.log
+[2018-04-04 18:29:24] Standard Output for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2_pset/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_DKHD_INSURANCE_CHARGE_ACC2_2018-04-04-18-27-56_9175960
+[2018-04-04 18:30:04] Standard Output for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_DETAIL2_pset/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_DKHD_INSURANCE_DETAIL2_2018-04-04-18-28-24_5047172
+[2018-04-04 18:30:36] Standard Output for '/Load RDU/RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2_pset/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_DKHD_INSURANCE_CONTRACT_DETAIL2_2018-04-04-18-28-35_26084108
+[2018-04-04 18:30:36] Completed subplan '/Load RDU' (status=Success)
+[2018-04-04 18:35:25] Standard Output for '/RDU_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN/perform':
+info : ++++ STARTED ++++ Job RDU_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_2018-04-04-18-35-17_28311798
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_RDU/tracking/airun/RDU_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_2018-04-04-18-35-17_28311798.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_RDU/parameter/airun/RDU_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_2018-04-04-18-35-17_28311798.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_RDU/error/airun/RDU_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_PSET_RDU_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_32703174_2018-04-04-18-35-17.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_RDU/log/airun/RDU_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_PSET_RDU_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_6030256_2018-04-04-18-35-17.log
+[2018-04-04 18:35:44] Standard Output for '/RDU_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN/perform':
+info : ++++ COMPLETED ++++ Job RDU_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_2018-04-04-18-35-17_28311798
+[2018-04-04 18:35:44] Completed plan '/' (status=Success)

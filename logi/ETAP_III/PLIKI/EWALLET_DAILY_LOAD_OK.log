@@ -1,0 +1,54 @@
+[2018-04-06 05:27:36] Plan File: /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/EWALLET_DAILY_LOAD.plan
+[2018-04-06 05:27:36] Recovery File: /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/EWALLET_DAILY_LOAD.rec
+[2018-04-06 05:27:36] Beginning plan '/'
+[2018-04-06 05:27:55] Standard Output for '/EWALLET_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN/perform':
+info : ++++ STARTED ++++ Job EWALLET_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_2018-04-06-05-27-53_46465080
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_EWALLET/tracking/airun/EWALLET_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_2018-04-06-05-27-53_46465080.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_EWALLET/parameter/airun/EWALLET_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_2018-04-06-05-27-53_46465080.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_EWALLET/error/airun/EWALLET_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_PSET_EWALLET_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_33554958_2018-04-06-05-27-53.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_EWALLET/log/airun/EWALLET_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_PSET_EWALLET_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_5439732_2018-04-06-05-27-53.log
+[2018-04-06 05:28:02] Standard Output for '/EWALLET_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN/perform':
+info : ++++ COMPLETED ++++ Job EWALLET_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN_2018-04-06-05-27-53_46465080
+[2018-04-06 05:28:02] Beginning subplan '/LOAD'
+[2018-04-06 05:38:18] Standard Output for '/LOAD/EWALLET_LOAD_DKHD_GENERIC_EWALLET_DETAIL/perform':
+info : ++++ STARTED ++++ Job EWALLET_LOAD_DKHD_GENERIC_EWALLET_DETAIL_2018-04-06-05-38-14_42467520
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_EWALLET/tracking/airun/EWALLET_LOAD_DKHD_GENERIC_EWALLET_DETAIL_2018-04-06-05-38-14_42467520.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_EWALLET/parameter/airun/EWALLET_LOAD_DKHD_GENERIC_EWALLET_DETAIL_2018-04-06-05-38-14_42467520.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_EWALLET/error/airun/EWALLET_LOAD_DKHD_GENERIC_EWALLET_DETAIL_PSET_EWALLET_LOAD_DKHD_GENERIC_EWALLET_DETAIL_5832982_2018-04-06-05-38-14.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_EWALLET/log/airun/EWALLET_LOAD_DKHD_GENERIC_EWALLET_DETAIL_PSET_EWALLET_LOAD_DKHD_GENERIC_EWALLET_DETAIL_15073644_2018-04-06-05-38-14.log
+[2018-04-06 05:38:32] Standard Output for '/LOAD/EWALLET_LOAD_DKHD_GENERIC_E_CUST_PROSP_EWALLET_DETAIL/perform':
+info : ++++ STARTED ++++ Job EWALLET_LOAD_DKHD_GENERIC_E_CUST_PROSP_EWALLET_DETAIL_2018-04-06-05-38-28_33620424
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_EWALLET/tracking/airun/EWALLET_LOAD_DKHD_GENERIC_E_CUST_PROSP_EWALLET_DETAIL_2018-04-06-05-38-28_33620424.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_EWALLET/parameter/airun/EWALLET_LOAD_DKHD_GENERIC_E_CUST_PROSP_EWALLET_DETAIL_2018-04-06-05-38-28_33620424.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_EWALLET/error/airun/EWALLET_LOAD_DKHD_GENERIC_E_CUST_PROSP_EWALLET_DETAIL_PSET_EWALLET_LOAD_DKHD_GENERIC_E_CUST_PROSP_EWALLET_DETAIL_33423902_2018-04-06-05-38-28.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_EWALLET/log/airun/EWALLET_LOAD_DKHD_GENERIC_E_CUST_PROSP_EWALLET_DETAIL_PSET_EWALLET_LOAD_DKHD_GENERIC_E_CUST_PROSP_EWALLET_DETAIL_14942714_2018-04-06-05-38-28.log
+[2018-04-06 05:39:38] Standard Output for '/LOAD/EWALLET_LOAD_DKHD_GENERIC_EWALLET_DETAIL/perform':
+info : ++++ COMPLETED ++++ Job EWALLET_LOAD_DKHD_GENERIC_EWALLET_DETAIL_2018-04-06-05-38-14_42467520
+[2018-04-06 05:39:44] Standard Output for '/LOAD/EWALLET_LOAD_DKHD_GENERIC_E_CUST_PROSP_EWALLET_DETAIL/perform':
+info : ++++ COMPLETED ++++ Job EWALLET_LOAD_DKHD_GENERIC_E_CUST_PROSP_EWALLET_DETAIL_2018-04-06-05-38-28_33620424
+[2018-04-06 05:40:18] Completed subplan '/LOAD' (status=Success)
+[2018-04-06 05:43:19] Standard Output for '/EWALLET_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN/perform':
+info : ++++ STARTED ++++ Job EWALLET_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_2018-04-06-05-43-18_30081454
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_04.log
+info : Raw tracking to /app/abinitio/data/prod/admin/hd/wh_EWALLET/tracking/airun/EWALLET_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_2018-04-06-05-43-18_30081454.tracking
+info : Input pset archived to /app/abinitio/data/prod/admin/hd/wh_EWALLET/parameter/airun/EWALLET_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_2018-04-06-05-43-18_30081454.pset
+info : Summary is not being collected
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_EWALLET/error/airun/EWALLET_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_PSET_EWALLET_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_28246940_2018-04-06-05-43-18.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_EWALLET/log/airun/EWALLET_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_PSET_EWALLET_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_21496580_2018-04-06-05-43-18.log
+[2018-04-06 05:43:44] Standard Output for '/EWALLET_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN/perform':
+info : ++++ COMPLETED ++++ Job EWALLET_LOAD_DKHD_BWDD_FINAL_RUNSQL_GEN_2018-04-06-05-43-18_30081454
+[2018-04-06 05:43:44] Completed plan '/' (status=Success)

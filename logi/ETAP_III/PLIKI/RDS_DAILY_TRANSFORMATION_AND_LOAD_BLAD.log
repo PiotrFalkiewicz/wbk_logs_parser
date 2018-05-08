@@ -1,0 +1,50 @@
++ planname=RDS_DAILY_TRANSFORMATION_AND_LOAD.plan
++ planpath=/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/
++ runpath=/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan
++ cd /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan
++ air sandbox run /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/RDS_DAILY_TRANSFORMATION_AND_LOAD.plan
+info : ++++ STARTED ++++ Job RDS_DAILY_TRANSFORMATION_AND_LOAD.plan_2018-01-21-11-10-25_30736584
+info : Execution host p_abinitio
+info : Central logging to /app/abinitio/data/prod/admin/log/environment_operations_2018_01.log
+info : Plan tracking to /app/abinitio/data/prod/admin/hd/wh_plans_daily/tracking/airun/RDS_DAILY_TRANSFORMATION_AND_LOAD.plan_2018-01-21-11-10-25_30736584.dom
+info : Plan input pset archived to /app/abinitio/data/prod/admin/hd/wh_plans_daily/parameter/airun/RDS_DAILY_TRANSFORMATION_AND_LOAD.plan_2018-01-21-11-10-25_30736584.pset
+info : Error logging to /app/abinitio/data/prod/admin/hd/wh_plans_daily/error/airun/RDS_DAILY_TRANSFORMATION_AND_LOAD.plan_PSET__20447834_2018-01-21-11-10-25.err
+info : Duplicating stderr
+info : Detailed logging to /app/abinitio/data/prod/admin/hd/wh_plans_daily/log/airun/RDS_DAILY_TRANSFORMATION_AND_LOAD.plan_PSET__8257732_2018-01-21-11-10-25.log
+WARNING: While requesting a resource, a warning was issued.  Request
+will continue.
+  Task/plan name: /RDS_LOAD_DKHD_BWDD_PROD_RUNSQL_GEN
+  Warning: The resource pool '/app/abinitio/users/aiprod/sand/public/pub_plans/resource/DB_KHD_prod.pool' is out of date in the resource server.
+[2018-01-21 11:24:55] Standard Error for '/RDS_TRNS_PROD_BZWBK_GRP_RDS/perform':
+========= Error from porownanie_RDS_MIS01.ROLL_SRCE_PROD_CDE_.000 on p_abinitio =========
+While compiling finalize:
+While compiling transform finalize:
+The expression 'out.DEP_PEN_INT_CDE' cannot be the destination of a transform rule.
+Only variable names and field references may appear on the left-side of a rule, array references are not permitted.
+
+========= Error from porownanie_RDS_MIS01.J1_SRCE_SYS_SRCE_PROD_CDE_.000 on p_abinitio =========
+While compiling transform join:
+Field "DEP_PEN_INT_CDE" not found in
+"record
+  decimal("|") PROD_CDE = NULL("");
+  date("YYYY-MM-DD")("|") START_DTE = NULL(""), END_DTE = NULL("");
+  decimal("|") SRCE_SYS = NULL("");
+  string("|") SRCE_DB = NULL(""), SRCE_PROD_CDE = NULL(""), SRCE_PROD_ID = NULL(""), PROD_NAME = NULL(""), PROD_STA_CDE = NULL(""), PROD_CAT_DESCR = NULL(""), PROD_GRP_LEV1_ID = NULL(""), PROD_SUMM_DESCR = NULL(""), PROD_GRP_LEV2_ID = NULL(""), PROD_GRP_DESCR = NULL(""), PROD_GRP_LEV3_ID = NULL(""), PROD_DTL_GRP_DESCR = NULL(""), PROD_DTL_DESCR = NULL(""), INTEREST_PLAN_NO = NULL(""), CHARGE_PLAN_NO = NULL(""), ISO_CRNCY_CDE = NULL(""), PURPOSE_CDE = NULL(""), MATURITY_GRP_CDE = NULL(""), FATCA_IND = NULL(""), CRS_IND = NULL(""), UNIVERS_IND = NULL(""), CALC_FLG = NULL(""), RATING_PROD_CDE = NULL(""), EXPOS_GRP_CDE = NULL(""), EXPOS_CAT_CDE = NULL(""), SUBSIDIZED_LOAN_CDE = NULL("");
+  date("YYYY-MM-DD")("|") RDS_START_DTE = NULL(""), RDS_END_DTE = NULL(""), SALE_START_DTE = NULL(""), SALE_END_DTE = NULL("");
+  string("|") SRCE_LOAD_LAST_ACTION = NULL(""), LOAD_LAST_ACTION = NULL("");
+  date("YYYY-MM-DD")("|") LOAD_DTE = NULL("");
+  datetime("HH24:MI:SS")("|") LOAD_TIME = NULL("");
+  string("|") DUPL_CNT = NULL("");
+...".
+
+ABINITIO (3.2.7.3): Sun Jan 21 11:24:54 2018
+ABINITIO: Rolling back ... Done.
+ABINITIO: Auto rollback succeeded.
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5a646711-1c8007e-8-RDS_TRNS_PROD_BZWBK_GRP_RDS.rec
+[2018-01-21 11:24:58] Standard Error for '/RDS_TRNS_PROD_BZWBK_GRP_RDS/atrollback':
+ABINITIO (3.2.7.3): Sun Jan 21 11:24:57 2018
+ABINITIO: Rolling back job from recovery file "/app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5a646711-1c8007e-8-RDS_TRNS_PROD_BZWBK_GRP_RDS.rec".
+ABINITIO: Job may be continued from last checkpoint by re-running.
+ABINITIO: Job may be closed and recovery file deleted by: m_rollback -d /app/abinitio/users/aiprod/private_sand/hd_215/wh_plans_daily/plan/pi-a321a0a-5a646711-1c8007e-8-RDS_TRNS_PROD_BZWBK_GRP_RDS.rec
+info : ++++ FAILED ++++ Job RDS_DAILY_TRANSFORMATION_AND_LOAD.plan_2018-01-21-11-10-25_30736584
