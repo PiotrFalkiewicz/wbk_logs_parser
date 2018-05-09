@@ -3,11 +3,12 @@ import traceback
 from datetime import datetime
 import glob
 import re
+import csv
 
 #script with parser
 import WBKLogsParser
 
-#Select last countOfLogs logs to be analayzed and starts the process
+#Select last countOfLogs logs to be analayzed, starts the process and create csv file with summary data about countOfLogs logs
 #
 #Arguments:
 #planname - Name of the plan
@@ -31,6 +32,10 @@ def main(planname, inputDirectory, countOfLogs, relationsFile, outputDirectory):
     #select countOfLogs last logs
     logsdates = logsdates[:countOfLogs]
 
+    #collects data for summary csv file
+    outputSummaryFile = []
+    outputSummaryFile.append(["PLAN_NAME", "START_TIME", "END_TIME", "DURATION_TIME", "RESOURCES_WAIT_TIME", "NUM_OF_ERRORS"])
+
     #starts function to parse logs into csv files
     for log in logsdates:
         #todo - only Windows should need it - can be removed at the end
@@ -39,9 +44,14 @@ def main(planname, inputDirectory, countOfLogs, relationsFile, outputDirectory):
         print('Output for log:')
         print(log[0])
         try:
-            WBKLogsParser.main(log[0], relationsFile, outputDirectory)
+            outputSummaryFile.append(WBKLogsParser.main(log[0], relationsFile, outputDirectory))
         except:
             traceback.print_exc()
+            outputSummaryFile.append(["PROCESS ERROR"])
+
+    with open(outputDirectory + '/' + planname + '_SUMMARY_' + datetime.now().strftime('%Y-%m-%d-%H-%M-%S') + '.csv', 'w', newline='') as f:
+        writer = csv.writer(f, delimiter=';')
+        writer.writerows(outputSummaryFile)
 
 #Extracts arguments from args and starts main program
 #args:
