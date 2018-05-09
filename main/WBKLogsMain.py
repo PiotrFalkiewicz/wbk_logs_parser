@@ -13,8 +13,9 @@ import WBKLogsParser
 #planname - Name of the plan
 #inputDirectory - Directory where log files are storaged
 #countOfLogs - Count of logs to be analyzed
-#dependenciesFile - Address of input dependencies csv file
-def main(planname, inputDirectory, countOfLogs, dependenciesFile):
+#relationsFile - Address of input relations csv file
+#outputDirectory - Address where to storage output csv file
+def main(planname, inputDirectory, countOfLogs, relationsFile, outputDirectory):
     logs = glob.glob(inputDirectory + '/' + planname + '*.log')
 
     logsdates = []
@@ -38,7 +39,7 @@ def main(planname, inputDirectory, countOfLogs, dependenciesFile):
         print('Output for log:')
         print(log[0])
         try:
-            WBKLogsParser.main(log[0], dependenciesFile)
+            WBKLogsParser.main(log[0], relationsFile, outputDirectory)
         except:
             traceback.print_exc()
 
@@ -47,12 +48,14 @@ def main(planname, inputDirectory, countOfLogs, dependenciesFile):
 #planname - Name of the plan
 #inputDirectory - Directory where log files are storaged
 #countOfLogs - Count of logs to be analyzed
-#dependenciesFile - Address of input dependencies csv file
+#relationsFile - Address of input relations csv file
+#outputDirectory - Address where to storage output csv file
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("planname", help="Name of the plan", type=str)
     parser.add_argument("inputDirectory", help="Directory where log files are storaged", type=str)
     parser.add_argument("countOfLogs", help="Count of logs to be analyzed", type=int)
-    parser.add_argument("dependenciesFile", help="Address of input dependencies csv file", type=str)
+    parser.add_argument("relationsFile", help="Address of input relations csv file", type=str)
+    parser.add_argument("outputDirectory", help="Address where to storage output csv file", type=str)
     args = parser.parse_args()
-    main(args.planname, args.inputDirectory, args.countOfLogs, args.dependenciesFile)
+    main(args.planname, args.inputDirectory, args.countOfLogs, args.relationsFile, args.outputDirectory)

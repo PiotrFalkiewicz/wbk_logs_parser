@@ -82,7 +82,7 @@ def normalTasks(candidates, tasks):
 
     return result
 
-def reformatDependencies(collection):
+def reformatRelations(collection):
     newTable = []
     for line in collection:
         if len(newTable) > 0:
@@ -136,7 +136,7 @@ def reformatDependencies(collection):
 
     return newTable
 
-def calculateTimes(collection, dependencies):
+def calculateTimes(collection, relations):
     result = []
 
     for task in collection:
@@ -145,7 +145,7 @@ def calculateTimes(collection, dependencies):
         newLine.append(str(int(task[2])-int(task[1])))
         isOnList = False
         anchestorTime = ''
-        for dep in dependencies:
+        for dep in relations:
             if dep[0] == task[0]:
                 isOnList = True
                 for agTask in collection:
@@ -162,10 +162,10 @@ def calculateTimes(collection, dependencies):
 
 
 
-def main(inputFile, dependenciesFile):
+def main(inputFile, relationsFile, outputDirectory):
     lines = readFile(inputFile)
 
-    csv = readCSVFile(dependenciesFile)
+    csv = readCSVFile(relationsFile)
     #
     # for line in csv:
     #     print(line)
@@ -178,9 +178,9 @@ def main(inputFile, dependenciesFile):
     print()
     newList = normalTasks(candidates, tasks)
 
-    newDependencies = reformatDependencies(csv)
+    newRelations = reformatRelations(csv)
 
-    for line in newDependencies:
+    for line in newRelations:
         print(line)
 
     print("")
@@ -190,7 +190,7 @@ def main(inputFile, dependenciesFile):
         print(item)
 
 
-    finalCollection = calculateTimes(newList, newDependencies)
+    finalCollection = calculateTimes(newList, newRelations)
 
     print("")
     for line in finalCollection:
@@ -204,6 +204,7 @@ def main(inputFile, dependenciesFile):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("inputFile", help="Address of input log file", type=str)
-    parser.add_argument("dependenciesFile", help="Address of input log file", type=str)
+    parser.add_argument("relationsFile", help="Address of input log file", type=str)
+    parser.add_argument("outputDirectory", help="Address where to storage output csv file", type=str)
     args = parser.parse_args()
-    main(args.inputFile, args.dependenciesFile)
+    main(args.inputFile, args.relationsFile, args.outputDirectory)
