@@ -14,7 +14,7 @@ def readFile(filename):
 def readCSVFile(filename):
     rows = []
     with open(filename, 'r') as file:
-        reader = csv.reader(file)
+        reader = csv.reader(file, delimiter=';')
         for row in reader:
             rows.append(row)
     return rows[1:]
