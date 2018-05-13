@@ -1,8 +1,23 @@
+[2018-03-29 08:58:48] Standard Output for '/GRAPH_TASK3/perform':
 info : ++++ STARTED ++++ Job Graph3_2018-03-29-08-58-46_54067436
+
+[2018-03-29 08:58:50] Standard Output for '/GRAPH_TASK1/perform':
 info : ++++ STARTED ++++ Job Graph1_2018-03-29-08-58-47_35389510
+
+[2018-03-29 08:58:51] Standard Output for '/GRAPH_TASK3/perform':
 info : ++++ COMPLETED ++++ Job Graph3_2018-03-29-08-58-46_54067436
+
+[2018-03-29 08:58:52] Standard Output for '/GRAPH_TASK1/perform':
 info : ++++ COMPLETED ++++ Job Graph1_2018-03-29-08-58-47_35389510
-info : ++++ STARTED ++++ Job Graph3_2018-03-29-08-58-53_64880824
+
+[2018-03-29 08:58:56] Standard Output for '/GRAPH_TASK4/perform':
+
+[2018-03-29 08:58:58] Standard Output for '/GRAPH_TASK2/perform':
+
 info : ++++ STARTED ++++ Job Graph2_2018-03-29-08-58-55_64880838
+
+[2018-03-29 08:59:00] Standard Output for '/GRAPH_TASK4/perform':
 info : ++++ COMPLETED ++++ Job Graph3_2018-03-29-08-58-53_64880824
+
+[2018-03-29 08:59:01] Standard Output for '/GRAPH_TASK2/perform':
 info : ++++ COMPLETED ++++ Job Graph2_2018-03-29-08-58-55_64880838

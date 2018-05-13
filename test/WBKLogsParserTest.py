@@ -43,7 +43,7 @@ class TestSecondIteration(unittest.TestCase):
     def test_candidates_with_time(self):
         data = main.WBKLogsParser.readFile('resources/test_plan_2_2.log')
         candidates = main.WBKLogsParser.chooseCandidatesWithTime(data)
-        self.assertEqual(8, len(candidates))
+        self.assertEqual(6, len(candidates))
 
     def test_parse_task_name(self):
         name = main.WBKLogsParser.parseTaskName('Graph1')
@@ -53,7 +53,7 @@ class TestSecondIteration(unittest.TestCase):
         data = main.WBKLogsParser.readFile('resources/test_plan_2_2.log')
         candidates = main.WBKLogsParser.chooseCandidatesWithTime(data)
         type, name, time = main.WBKLogsParser.getTypeNameTime(candidates[0])
-        self.assertEqual((type, name, time), (0, 'GRAPH_3', '2018-03-29 08:58:46'))
+        self.assertEqual((type, name, time), (0, 'GRAPH_3', '2018-03-29 08:58:48'))
 
     def test_pivot_dependencies(self):
         newPivot = main.WBKLogsParser.reformatRelations([['TASK2', 'TASK1','TASK1']])

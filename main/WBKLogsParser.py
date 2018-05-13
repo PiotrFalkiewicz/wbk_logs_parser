@@ -26,41 +26,57 @@ def parseTaskName(taskname):
 def chooseCandidates(lines):
     result = []
     keyword = 'perform'
-    for line in lines:
-        if keyword in line:
-            result.append(line)
+    for line in range(len(lines)-1):
+        if keyword in lines[line]:
+            subresult = []
+            subresult.append(lines[line])
+            subresult.append(lines[line-1])
+            result.append(subresult)
+            # result.append(lines[line])
+    # print(result)
     return result
 
 def chooseCandidatesWithTime(lines):
     result = []
     keyword1 = 'STARTED'
     keyword2 = 'COMPLETED'
-    for line in lines:
-        if keyword1 in line or keyword2 in line:
-            result.append(line)
+    for line in range(len(lines) - 1):
+        if keyword1 in lines[line] or keyword2 in lines[line]:
+            subresult = []
+            subresult.append(lines[line])
+            subresult.append(lines[line - 1])
+            result.append(subresult)
+            # result.append(lines[line])
+    # print(result)
     return result
 
-def getTypeNameTime(line):
-    items = line.split(' ')
+def getTypeNameTime(lines):
+    items1 = lines[0].split(' ')
+    date = lines[1].split('[')[1].split(']')[0]
 
     type = -1
-    if items[3] == 'STARTED':
+    if items1[3] == 'STARTED':
         type = 0
-    elif items[3] == 'COMPLETED':
+    elif items1[3] == 'COMPLETED':
         type = 1
 
-    name = parseTaskName(items[-1].split('_')[0])
+    name = parseTaskName(items1[-1].split('_')[0])
 
-    date = items[-1].split('_')[-2]
-
-
-    time = arrow.get(date, 'YYYY-MM-DD-HH-mm-ss').format('YYYY-MM-DD HH:mm:ss')
+    time = arrow.get(date, 'YYYY-MM-DD HH:mm:ss').format('YYYY-MM-DD HH:mm:ss')
     return type, name, time
 
 def parseLinesToNames(candidates):
     result = []
-    for line in candidates:
+    mainLine = ''
+    subcandidates = []
+    for group in candidates:
+        for line in group:
+            if 'COMPLETED' not in line and 'STARTED' not in line:
+                # print(line)
+                subcandidates.append(line)
+    for line in subcandidates:
         items = line.split('/')
+        print(items[1])
         result.append(items[1])
     return result
 
