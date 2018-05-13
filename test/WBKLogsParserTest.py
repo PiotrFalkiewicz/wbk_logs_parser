@@ -53,16 +53,16 @@ class TestSecondIteration(unittest.TestCase):
         data = main.WBKLogsParser.readFile('resources/test_plan_2_2.log')
         candidates = main.WBKLogsParser.chooseCandidatesWithTime(data)
         type, name, time = main.WBKLogsParser.getTypeNameTime(candidates[0])
-        self.assertEqual((type, name, time), (0, 'GRAPH_3', '32326'))
+        self.assertEqual((type, name, time), (0, 'GRAPH_3', '2018-03-29 08:58:46'))
 
     def test_pivot_dependencies(self):
-        newPivot = main.WBKLogsParser.reformatDependencies([['TASK2', 'TASK1','TASK1']])
+        newPivot = main.WBKLogsParser.reformatRelations([['TASK2', 'TASK1','TASK1']])
         self.assertEqual(newPivot,[['TASK1', 'TASK2']])
 
     def test_calculate_time(self):
-        obj = main.WBKLogsParser.calculateTimes([['task1','123','126']],[])
+        obj = main.WBKLogsParser.calculateTimes([['task1','2018-03-29 08:58:46','2018-03-29 08:58:48']],[])
 
-        self.assertEqual(obj,[['task1','3','']])
+        self.assertEqual(obj,[['task1','00:00:02','']])
 
 if __name__ == '__main__':
     unittest.main()

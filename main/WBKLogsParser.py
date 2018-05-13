@@ -1,5 +1,6 @@
 import argparse
 import csv
+import arrow
 
 def utilDistinct(listArg):
     return(list(set(listArg)))
@@ -50,9 +51,10 @@ def getTypeNameTime(line):
 
     name = parseTaskName(items[-1].split('_')[0])
 
-    date = items[-1].split('_')[-2].split('-')
-    time = str(int(date[3])*3600+int(date[4])*60+int(date[5]))
+    date = items[-1].split('_')[-2]
 
+
+    time = arrow.get(date, 'YYYY-MM-DD-HH-mm-ss').format('YYYY-MM-DD HH:mm:ss')
     return type, name, time
 
 def parseLinesToNames(candidates):
@@ -142,8 +144,12 @@ def calculateTimes(collection, relations):
     for task in collection:
         newLine = []
         newLine.append(task[0])
-        newLine.append(str(int(task[2])-int(task[1])))
         isOnList = False
+        processingTime = arrow.get(task[2], 'YYYY-MM-DD HH:mm:ss').timestamp-arrow.get(task[1], 'YYYY-MM-DD HH:mm:ss').timestamp
+        pattern = ''
+        for x in str(processingTime):
+            pattern+='s'
+        newLine.append(arrow.get(str(processingTime), pattern).format('HH:mm:ss'))
         anchestorTime = ''
         for dep in relations:
             if dep[0] == task[0]:
@@ -155,7 +161,7 @@ def calculateTimes(collection, relations):
         if not isOnList:
             newLine.append('')
         else:
-            newLine.append(str(int(task[1])-int(anchestorTime)))
+            newLine.append((task[1].timestamp-anchestorTime.timestamp).format('YYYY-MM-DD HH:mm:ss'))
         result.append(newLine)
 
     return result
